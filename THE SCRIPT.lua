@@ -3,7 +3,7 @@
 -- Instances:
 
 local Converted = {
-	["_ScreenGui"] = Instance.new("ScreenGui");
+	["_xd gui"] = Instance.new("ScreenGui");
 	["_main"] = Instance.new("Frame");
 	["_UICorner"] = Instance.new("UICorner");
 	["_Content"] = Instance.new("Frame");
@@ -21,21 +21,27 @@ local Converted = {
 	["_UIStroke2"] = Instance.new("UIStroke");
 	["_TextLabel1"] = Instance.new("TextLabel");
 	["_UIPadding2"] = Instance.new("UIPadding");
+	["_Panel2"] = Instance.new("Frame");
+	["_UIStroke3"] = Instance.new("UIStroke");
+	["_TextLabel2"] = Instance.new("TextLabel");
+	["_UIPadding3"] = Instance.new("UIPadding");
 	["_Text"] = Instance.new("TextLabel");
+	["_LocalScript"] = Instance.new("LocalScript");
 	["_title"] = Instance.new("TextLabel");
+	["_Welcome"] = Instance.new("TextLabel");
+	["_LocalScript1"] = Instance.new("LocalScript");
 	["_UICorner1"] = Instance.new("UICorner");
 	["_Topbar"] = Instance.new("Frame");
 	["_close"] = Instance.new("TextButton");
 	["_UICorner2"] = Instance.new("UICorner");
-	["_LocalScript"] = Instance.new("LocalScript");
+	["_LocalScript2"] = Instance.new("LocalScript");
 	["_min"] = Instance.new("TextButton");
 	["_UICorner3"] = Instance.new("UICorner");
-	["_TextLabel2"] = Instance.new("TextLabel");
-	["_UIPadding3"] = Instance.new("UIPadding");
 	["_TextLabel3"] = Instance.new("TextLabel");
-	["_UICorner4"] = Instance.new("UICorner");
 	["_UIPadding4"] = Instance.new("UIPadding");
-	["_LocalScript1"] = Instance.new("LocalScript");
+	["_TextLabel4"] = Instance.new("TextLabel");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_UIPadding5"] = Instance.new("UIPadding");
 	["_UIDragDetector"] = Instance.new("UIDragDetector");
 	["_open"] = Instance.new("TextButton");
 	["_Menu_img"] = Instance.new("Frame");
@@ -50,23 +56,24 @@ local Converted = {
 	["_UIShadow2"] = Instance.new("UIShadow");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
 	["_UICorner8"] = Instance.new("UICorner");
-	["_LocalScript2"] = Instance.new("LocalScript");
+	["_LocalScript3"] = Instance.new("LocalScript");
 	["_splash"] = Instance.new("Frame");
 	["_Frame3"] = Instance.new("Frame");
 	["_UICorner9"] = Instance.new("UICorner");
 	["_UIShadow3"] = Instance.new("UIShadow");
-	["_UIStroke3"] = Instance.new("UIStroke");
-	["_TextLabel4"] = Instance.new("TextLabel");
+	["_UIStroke4"] = Instance.new("UIStroke");
 	["_TextLabel5"] = Instance.new("TextLabel");
-	["_LocalScript3"] = Instance.new("LocalScript");
+	["_TextLabel6"] = Instance.new("TextLabel");
+	["_LocalScript4"] = Instance.new("LocalScript");
 }
 
 -- Properties:
 
-Converted["_ScreenGui"].IgnoreGuiInset = true
-Converted["_ScreenGui"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-Converted["_ScreenGui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_ScreenGui"].Parent = game:GetService("CoreGui")
+Converted["_xd gui"].IgnoreGuiInset = true
+Converted["_xd gui"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_xd gui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_xd gui"].Name = "xd gui"
+Converted["_xd gui"].Parent = game:GetService("CoreGui")
 
 Converted["_main"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_main"].BackgroundColor3 = Color3.fromRGB(203.00000309944153, 203.00000309944153, 203.00000309944153)
@@ -75,13 +82,13 @@ Converted["_main"].BorderSizePixel = 0
 Converted["_main"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_main"].Size = UDim2.new(0, 325, 0, 200)
 Converted["_main"].Name = "main"
-Converted["_main"].Parent = Converted["_ScreenGui"]
+Converted["_main"].Parent = Converted["_xd gui"]
 
-Converted["_UICorner"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner"].Parent = Converted["_main"]
 
 Converted["_Content"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -196,8 +203,37 @@ Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 2)
 Converted["_UIPadding2"].PaddingRight = UDim.new(0, 2)
 Converted["_UIPadding2"].Parent = Converted["_Panel1"]
 
+Converted["_Panel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Panel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Panel2"].BorderSizePixel = 0
+Converted["_Panel2"].Position = UDim2.new(0, 0, 0.0664739907, 0)
+Converted["_Panel2"].Size = UDim2.new(0, 92, 0, 21)
+Converted["_Panel2"].Name = "Panel"
+Converted["_Panel2"].Parent = Converted["_upd log"]
+
+Converted["_UIStroke3"].BorderStrokePosition = Enum.BorderStrokePosition.Inner
+Converted["_UIStroke3"].LineJoinMode = Enum.LineJoinMode.Bevel
+Converted["_UIStroke3"].Parent = Converted["_Panel2"]
+
+Converted["_TextLabel2"].Font = Enum.Font.SourceSans
+Converted["_TextLabel2"].Text = "9/17/26 -now live on github"
+Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel2"].TextScaled = true
+Converted["_TextLabel2"].TextSize = 14
+Converted["_TextLabel2"].TextWrapped = true
+Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel2"].BackgroundTransparency = 1
+Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel2"].BorderSizePixel = 0
+Converted["_TextLabel2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_TextLabel2"].Parent = Converted["_Panel2"]
+
+Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 2)
+Converted["_UIPadding3"].PaddingRight = UDim.new(0, 2)
+Converted["_UIPadding3"].Parent = Converted["_Panel2"]
+
 Converted["_Text"].Font = Enum.Font.SourceSansBold
-Converted["_Text"].Text = "xd gui is fire truss me bruh (this script is crappy like all the others, please dont read this)"
+Converted["_Text"].Text = "hi"
 Converted["_Text"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Text"].TextScaled = true
 Converted["_Text"].TextSize = 14
@@ -205,7 +241,8 @@ Converted["_Text"].TextWrapped = true
 Converted["_Text"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Text"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Text"].BorderSizePixel = 0
-Converted["_Text"].Size = UDim2.new(0, 200, 0, 175)
+Converted["_Text"].Position = UDim2.new(0, 0, 0.268571436, 0)
+Converted["_Text"].Size = UDim2.new(0, 200, 0, 128)
 Converted["_Text"].Name = "Text"
 Converted["_Text"].Parent = Converted["_Home"]
 
@@ -224,11 +261,25 @@ Converted["_title"].Size = UDim2.new(0, 100, 0, 18)
 Converted["_title"].Name = "title"
 Converted["_title"].Parent = Converted["_Home"]
 
-Converted["_UICorner1"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner1"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner1"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner1"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner1"].TopRightRadius = UDim.new(0, 2)
+Converted["_Welcome"].Font = Enum.Font.SourceSansItalic
+Converted["_Welcome"].Text = "Welcome, User"
+Converted["_Welcome"].TextColor3 = Color3.fromRGB(182.00000435113907, 182.00000435113907, 182.00000435113907)
+Converted["_Welcome"].TextScaled = true
+Converted["_Welcome"].TextSize = 14
+Converted["_Welcome"].TextWrapped = true
+Converted["_Welcome"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Welcome"].BackgroundTransparency = 1
+Converted["_Welcome"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Welcome"].BorderSizePixel = 0
+Converted["_Welcome"].Size = UDim2.new(0, 200, 0, 47)
+Converted["_Welcome"].Name = "Welcome"
+Converted["_Welcome"].Parent = Converted["_Home"]
+
+Converted["_UICorner1"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner1"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 0)
+Converted["_UICorner1"].TopLeftRadius = UDim.new(0, 0)
+Converted["_UICorner1"].TopRightRadius = UDim.new(0, 0)
 Converted["_UICorner1"].Parent = Converted["_Content"]
 
 Converted["_Topbar"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -277,46 +328,46 @@ Converted["_UICorner3"].TopLeftRadius = UDim.new(1, 8)
 Converted["_UICorner3"].TopRightRadius = UDim.new(1, 8)
 Converted["_UICorner3"].Parent = Converted["_min"]
 
-Converted["_TextLabel2"].Font = Enum.Font.SourceSans
-Converted["_TextLabel2"].Text = "xd gui 1.0"
-Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel2"].TextSize = 14
-Converted["_TextLabel2"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel2"].BackgroundTransparency = 1
-Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel2"].BorderSizePixel = 0
-Converted["_TextLabel2"].Size = UDim2.new(0, 75, 0, 25)
-Converted["_TextLabel2"].Parent = Converted["_Topbar"]
-
-Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 3)
-Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 3)
-Converted["_UIPadding3"].PaddingRight = UDim.new(0, 3)
-Converted["_UIPadding3"].PaddingTop = UDim.new(0, 3)
-Converted["_UIPadding3"].Parent = Converted["_TextLabel2"]
-
-Converted["_TextLabel3"].Font = Enum.Font.SourceSansBold
-Converted["_TextLabel3"].Text = "BETA"
+Converted["_TextLabel3"].Font = Enum.Font.SourceSans
+Converted["_TextLabel3"].Text = "xd gui 1.0"
 Converted["_TextLabel3"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel3"].TextSize = 14
-Converted["_TextLabel3"].TextYAlignment = Enum.TextYAlignment.Top
-Converted["_TextLabel3"].BackgroundColor3 = Color3.fromRGB(255, 157.0000058412552, 0)
+Converted["_TextLabel3"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel3"].BackgroundTransparency = 1
 Converted["_TextLabel3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel3"].BorderSizePixel = 0
-Converted["_TextLabel3"].Position = UDim2.new(0.181538463, 0, 0.200000003, 0)
-Converted["_TextLabel3"].Size = UDim2.new(0, 31, 0, 13)
+Converted["_TextLabel3"].Size = UDim2.new(0, 75, 0, 25)
 Converted["_TextLabel3"].Parent = Converted["_Topbar"]
+
+Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 3)
+Converted["_UIPadding4"].PaddingLeft = UDim.new(0, 3)
+Converted["_UIPadding4"].PaddingRight = UDim.new(0, 3)
+Converted["_UIPadding4"].PaddingTop = UDim.new(0, 3)
+Converted["_UIPadding4"].Parent = Converted["_TextLabel3"]
+
+Converted["_TextLabel4"].Font = Enum.Font.SourceSansBold
+Converted["_TextLabel4"].Text = "BETA"
+Converted["_TextLabel4"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel4"].TextSize = 14
+Converted["_TextLabel4"].TextYAlignment = Enum.TextYAlignment.Top
+Converted["_TextLabel4"].BackgroundColor3 = Color3.fromRGB(255, 157.0000058412552, 0)
+Converted["_TextLabel4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel4"].BorderSizePixel = 0
+Converted["_TextLabel4"].Position = UDim2.new(0.181538463, 0, 0.200000003, 0)
+Converted["_TextLabel4"].Size = UDim2.new(0, 31, 0, 13)
+Converted["_TextLabel4"].Parent = Converted["_Topbar"]
 
 Converted["_UICorner4"].BottomLeftRadius = UDim.new(0, 4)
 Converted["_UICorner4"].BottomRightRadius = UDim.new(0, 4)
 Converted["_UICorner4"].CornerRadius = UDim.new(0, 4)
 Converted["_UICorner4"].TopLeftRadius = UDim.new(0, 4)
 Converted["_UICorner4"].TopRightRadius = UDim.new(0, 4)
-Converted["_UICorner4"].Parent = Converted["_TextLabel3"]
+Converted["_UICorner4"].Parent = Converted["_TextLabel4"]
 
-Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 14)
-Converted["_UIPadding4"].PaddingRight = UDim.new(0, 4)
-Converted["_UIPadding4"].Parent = Converted["_TextLabel3"]
+Converted["_UIPadding5"].PaddingBottom = UDim.new(0, 14)
+Converted["_UIPadding5"].PaddingRight = UDim.new(0, 4)
+Converted["_UIPadding5"].Parent = Converted["_TextLabel4"]
 
 Converted["_UIDragDetector"].Parent = Converted["_main"]
 
@@ -332,7 +383,7 @@ Converted["_open"].BorderSizePixel = 0
 Converted["_open"].Position = UDim2.new(1, -4, 0, 4)
 Converted["_open"].Size = UDim2.new(0, 54, 0, 50)
 Converted["_open"].Name = "open"
-Converted["_open"].Parent = Converted["_ScreenGui"]
+Converted["_open"].Parent = Converted["_xd gui"]
 
 Converted["_Menu_img"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Menu_img"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -410,7 +461,7 @@ Converted["_splash"].BorderSizePixel = 0
 Converted["_splash"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_splash"].Visible = false
 Converted["_splash"].Name = "splash"
-Converted["_splash"].Parent = Converted["_ScreenGui"]
+Converted["_splash"].Parent = Converted["_xd gui"]
 
 Converted["_Frame3"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Frame3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -430,35 +481,35 @@ Converted["_UICorner9"].Parent = Converted["_Frame3"]
 Converted["_UIShadow3"].BlurRadius = UDim.new(0, 25)
 Converted["_UIShadow3"].Parent = Converted["_Frame3"]
 
-Converted["_UIStroke3"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke3"].Thickness = 0.5
-Converted["_UIStroke3"].Parent = Converted["_Frame3"]
+Converted["_UIStroke4"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke4"].Thickness = 0.5
+Converted["_UIStroke4"].Parent = Converted["_Frame3"]
 
-Converted["_TextLabel4"].Font = Enum.Font.Cartoon
-Converted["_TextLabel4"].Text = "loading..."
-Converted["_TextLabel4"].TextColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel4"].TextScaled = true
-Converted["_TextLabel4"].TextSize = 14
-Converted["_TextLabel4"].TextWrapped = true
-Converted["_TextLabel4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel4"].BackgroundTransparency = 1
-Converted["_TextLabel4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel4"].BorderSizePixel = 0
-Converted["_TextLabel4"].Size = UDim2.new(0, 250, 0, 50)
-Converted["_TextLabel4"].Parent = Converted["_Frame3"]
-
-Converted["_TextLabel5"].Font = Enum.Font.SourceSans
-Converted["_TextLabel5"].Text = "The GUI will wait 5 seconds to make sure everything loads. When 5 seconds is done, this screen will disappear"
-Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(129.00000751018524, 129.00000751018524, 129.00000751018524)
-Converted["_TextLabel5"].TextSize = 25
+Converted["_TextLabel5"].Font = Enum.Font.Cartoon
+Converted["_TextLabel5"].Text = "loading..."
+Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel5"].TextScaled = true
+Converted["_TextLabel5"].TextSize = 14
 Converted["_TextLabel5"].TextWrapped = true
-Converted["_TextLabel5"].TextYAlignment = Enum.TextYAlignment.Top
 Converted["_TextLabel5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].BackgroundTransparency = 1
 Converted["_TextLabel5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel5"].BorderSizePixel = 0
-Converted["_TextLabel5"].Position = UDim2.new(0.100000001, 0, 0.231111109, 0)
-Converted["_TextLabel5"].Size = UDim2.new(0, 200, 0, 150)
+Converted["_TextLabel5"].Size = UDim2.new(0, 250, 0, 50)
 Converted["_TextLabel5"].Parent = Converted["_Frame3"]
+
+Converted["_TextLabel6"].Font = Enum.Font.SourceSans
+Converted["_TextLabel6"].Text = "The GUI will wait 5 seconds to make sure everything loads. When 5 seconds is done, this screen will disappear"
+Converted["_TextLabel6"].TextColor3 = Color3.fromRGB(129.00000751018524, 129.00000751018524, 129.00000751018524)
+Converted["_TextLabel6"].TextSize = 25
+Converted["_TextLabel6"].TextWrapped = true
+Converted["_TextLabel6"].TextYAlignment = Enum.TextYAlignment.Top
+Converted["_TextLabel6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel6"].BorderSizePixel = 0
+Converted["_TextLabel6"].Position = UDim2.new(0.100000001, 0, 0.231111109, 0)
+Converted["_TextLabel6"].Size = UDim2.new(0, 200, 0, 150)
+Converted["_TextLabel6"].Parent = Converted["_Frame3"]
 
 -- Fake Module Scripts:
 
@@ -467,7 +518,61 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function OHPZR_fake_script() -- Fake Script: StarterGui.ScreenGui.main.Topbar.close.LocalScript
+local function EMPVGC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.Home.Text.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Text"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	-- List of your custom messages
+	local messages = {
+		"there is a 0.000000000000000192389162386213% chance that the script makes you die",
+		"did you know that the google logo is not a perfect circle",
+		"the owner likes tacos",
+		"did you know that brushing your teeth with a  1969 mercedes-benz actually is not as safe as a toothbursh",
+		"if you believe in meowism, please exit this script because i do not want you associated with me",
+		"i hate salad with ranch and croutons at 4am with the morning breeze in the patio"
+	}
+	
+	-- Pick a random message
+	math.randomseed(tick())
+	local randomMessage = messages[math.random(1, #messages)]
+	
+	-- Find the TextLabel by its name anywhere inside your ScreenGui
+	local textLabel = script.Parent
+	
+	if textLabel and textLabel:IsA("TextLabel") then
+		textLabel.Text = randomMessage
+	end
+end
+local function UCOT_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.Home.Welcome.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Welcome"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local textLabel = script.Parent
+	
+	-- Sets the text to "Welcome, " followed by your username
+	textLabel.Text = "Welcome, " .. player.Name
+end
+local function IRXJLF_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -487,22 +592,7 @@ local function OHPZR_fake_script() -- Fake Script: StarterGui.ScreenGui.main.Top
 		mainFrame.Visible = false
 	end)
 end
-local function DUSU_fake_script() -- Fake Script: StarterGui.ScreenGui.main.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_main"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	script.Parent.Visible = false
-end
-local function QHPMZ_fake_script() -- Fake Script: StarterGui.ScreenGui.open.LocalScript
+local function HGABCX_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -524,7 +614,7 @@ local function QHPMZ_fake_script() -- Fake Script: StarterGui.ScreenGui.open.Loc
 		main.Visible = not main.Visible
 	end)
 end
-local function UMJCTE_fake_script() -- Fake Script: StarterGui.ScreenGui.splash.LocalScript
+local function LTECMBU_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_splash"]
@@ -553,7 +643,8 @@ local function UMJCTE_fake_script() -- Fake Script: StarterGui.ScreenGui.splash.
 	main.Visible = true
 end
 
-coroutine.wrap(OHPZR_fake_script)()
-coroutine.wrap(DUSU_fake_script)()
-coroutine.wrap(QHPMZ_fake_script)()
-coroutine.wrap(UMJCTE_fake_script)()
+coroutine.wrap(EMPVGC_fake_script)()
+coroutine.wrap(UCOT_fake_script)()
+coroutine.wrap(IRXJLF_fake_script)()
+coroutine.wrap(HGABCX_fake_script)()
+coroutine.wrap(LTECMBU_fake_script)()
