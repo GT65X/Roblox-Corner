@@ -32,62 +32,78 @@ local Converted = {
 	["_title"] = Instance.new("TextLabel");
 	["_Welcome"] = Instance.new("TextLabel");
 	["_LocalScript1"] = Instance.new("LocalScript");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_Humanoid"] = Instance.new("Frame");
+	["_WalkSpeed"] = Instance.new("TextBox");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_UIStroke4"] = Instance.new("UIStroke");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_JumpPower"] = Instance.new("TextBox");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_UIStroke5"] = Instance.new("UIStroke");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_HipHeight"] = Instance.new("TextBox");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_UIStroke6"] = Instance.new("UIStroke");
+	["_LocalScript5"] = Instance.new("LocalScript");
 	["_Topbar"] = Instance.new("Frame");
 	["_close"] = Instance.new("TextButton");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_LocalScript2"] = Instance.new("LocalScript");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_UIShadow"] = Instance.new("UIShadow");
 	["_min"] = Instance.new("TextButton");
-	["_UICorner3"] = Instance.new("UICorner");
-	["_LocalScript3"] = Instance.new("LocalScript");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_LocalScript7"] = Instance.new("LocalScript");
 	["_Title"] = Instance.new("TextLabel");
 	["_UIPadding4"] = Instance.new("UIPadding");
 	["_Beta"] = Instance.new("TextLabel");
-	["_UICorner4"] = Instance.new("UICorner");
+	["_UICorner7"] = Instance.new("UICorner");
 	["_UIPadding5"] = Instance.new("UIPadding");
-	["_UIStroke4"] = Instance.new("UIStroke");
-	["_Menu"] = Instance.new("ImageButton");
-	["_LocalScript4"] = Instance.new("LocalScript");
-	["_Menu1"] = Instance.new("Frame");
+	["_UIStroke7"] = Instance.new("UIStroke");
+	["_MenuButton"] = Instance.new("ImageButton");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_Menu"] = Instance.new("Frame");
 	["_Label"] = Instance.new("TextLabel");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
 	["_Home1"] = Instance.new("TextButton");
 	["_Actions"] = Instance.new("TextButton");
 	["_Cheats"] = Instance.new("TextButton");
-	["_Humanoid"] = Instance.new("TextButton");
+	["_Humanoid1"] = Instance.new("TextButton");
 	["_Abusive"] = Instance.new("TextButton");
-	["_LocalScript5"] = Instance.new("LocalScript");
+	["_LocalScript9"] = Instance.new("LocalScript");
 	["_UIDragDetector"] = Instance.new("UIDragDetector");
 	["_open"] = Instance.new("TextButton");
 	["_Menu_img"] = Instance.new("Frame");
 	["_Frame"] = Instance.new("Frame");
-	["_UICorner5"] = Instance.new("UICorner");
-	["_UIShadow"] = Instance.new("UIShadow");
-	["_Frame1"] = Instance.new("Frame");
-	["_UICorner6"] = Instance.new("UICorner");
-	["_UIShadow1"] = Instance.new("UIShadow");
-	["_Frame2"] = Instance.new("Frame");
-	["_UICorner7"] = Instance.new("UICorner");
-	["_UIShadow2"] = Instance.new("UIShadow");
-	["_UIListLayout2"] = Instance.new("UIListLayout");
 	["_UICorner8"] = Instance.new("UICorner");
-	["_LocalScript6"] = Instance.new("LocalScript");
+	["_UIShadow1"] = Instance.new("UIShadow");
+	["_Frame1"] = Instance.new("Frame");
+	["_UICorner9"] = Instance.new("UICorner");
+	["_UIShadow2"] = Instance.new("UIShadow");
+	["_Frame2"] = Instance.new("Frame");
+	["_UICorner10"] = Instance.new("UICorner");
+	["_UIShadow3"] = Instance.new("UIShadow");
+	["_UIListLayout2"] = Instance.new("UIListLayout");
+	["_UICorner11"] = Instance.new("UICorner");
+	["_LocalScript10"] = Instance.new("LocalScript");
 	["_splash"] = Instance.new("Frame");
 	["_Frame3"] = Instance.new("Frame");
-	["_UICorner9"] = Instance.new("UICorner");
-	["_UIShadow3"] = Instance.new("UIShadow");
-	["_UIStroke5"] = Instance.new("UIStroke");
+	["_UICorner12"] = Instance.new("UICorner");
+	["_UIShadow4"] = Instance.new("UIShadow");
+	["_UIStroke8"] = Instance.new("UIStroke");
 	["_TextLabel3"] = Instance.new("TextLabel");
 	["_TextLabel4"] = Instance.new("TextLabel");
-	["_LocalScript7"] = Instance.new("LocalScript");
+	["_LocalScript11"] = Instance.new("LocalScript");
 }
 
 -- Properties:
 
 Converted["_xd gui"].IgnoreGuiInset = true
 Converted["_xd gui"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_xd gui"].ResetOnSpawn = false
 Converted["_xd gui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_xd gui"].Name = "xd gui"
-Converted["_xd gui"].Parent = game:GetService("CoreGui")
+Converted["_xd gui"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Converted["_main"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_main"].BackgroundColor3 = Color3.fromRGB(203.00000309944153, 203.00000309944153, 203.00000309944153)
@@ -148,6 +164,7 @@ Converted["_Home"].BackgroundTransparency = 1
 Converted["_Home"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Home"].BorderSizePixel = 0
 Converted["_Home"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Home"].Visible = false
 Converted["_Home"].Name = "Home"
 Converted["_Home"].Parent = Converted["_preset-frames"]
 
@@ -305,6 +322,72 @@ Converted["_Welcome"].Size = UDim2.new(0, 200, 0, 47)
 Converted["_Welcome"].Name = "Welcome"
 Converted["_Welcome"].Parent = Converted["_Home"]
 
+Converted["_Humanoid"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Humanoid"].BackgroundTransparency = 1
+Converted["_Humanoid"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Humanoid"].BorderSizePixel = 0
+Converted["_Humanoid"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Humanoid"].Visible = false
+Converted["_Humanoid"].Name = "Humanoid"
+Converted["_Humanoid"].Parent = Converted["_preset-frames"]
+
+Converted["_WalkSpeed"].CursorPosition = -1
+Converted["_WalkSpeed"].Font = Enum.Font.SourceSans
+Converted["_WalkSpeed"].PlaceholderText = "WalkSpeed"
+Converted["_WalkSpeed"].Text = ""
+Converted["_WalkSpeed"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_WalkSpeed"].TextSize = 14
+Converted["_WalkSpeed"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_WalkSpeed"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_WalkSpeed"].BorderSizePixel = 0
+Converted["_WalkSpeed"].Position = UDim2.new(0.190769225, 0, 0.102857143, 0)
+Converted["_WalkSpeed"].Size = UDim2.new(0, 200, 0, 38)
+Converted["_WalkSpeed"].Name = "WalkSpeed"
+Converted["_WalkSpeed"].Parent = Converted["_Humanoid"]
+
+Converted["_UICorner2"].Parent = Converted["_WalkSpeed"]
+
+Converted["_UIStroke4"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke4"].Parent = Converted["_WalkSpeed"]
+
+Converted["_JumpPower"].CursorPosition = -1
+Converted["_JumpPower"].Font = Enum.Font.SourceSans
+Converted["_JumpPower"].PlaceholderText = "JumpPower"
+Converted["_JumpPower"].Text = ""
+Converted["_JumpPower"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_JumpPower"].TextSize = 14
+Converted["_JumpPower"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_JumpPower"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_JumpPower"].BorderSizePixel = 0
+Converted["_JumpPower"].Position = UDim2.new(0.190769225, 0, 0.388571441, 0)
+Converted["_JumpPower"].Size = UDim2.new(0, 200, 0, 38)
+Converted["_JumpPower"].Name = "JumpPower"
+Converted["_JumpPower"].Parent = Converted["_Humanoid"]
+
+Converted["_UICorner3"].Parent = Converted["_JumpPower"]
+
+Converted["_UIStroke5"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke5"].Parent = Converted["_JumpPower"]
+
+Converted["_HipHeight"].CursorPosition = -1
+Converted["_HipHeight"].Font = Enum.Font.SourceSans
+Converted["_HipHeight"].PlaceholderText = "HipHeight"
+Converted["_HipHeight"].Text = ""
+Converted["_HipHeight"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HipHeight"].TextSize = 14
+Converted["_HipHeight"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HipHeight"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HipHeight"].BorderSizePixel = 0
+Converted["_HipHeight"].Position = UDim2.new(0.190769225, 0, 0.67428571, 0)
+Converted["_HipHeight"].Size = UDim2.new(0, 200, 0, 38)
+Converted["_HipHeight"].Name = "HipHeight"
+Converted["_HipHeight"].Parent = Converted["_Humanoid"]
+
+Converted["_UICorner4"].Parent = Converted["_HipHeight"]
+
+Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke6"].Parent = Converted["_HipHeight"]
+
 Converted["_Topbar"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Topbar"].BackgroundTransparency = 1
 Converted["_Topbar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -315,9 +398,9 @@ Converted["_Topbar"].Parent = Converted["_main"]
 
 Converted["_close"].Font = Enum.Font.SourceSans
 Converted["_close"].Text = "×"
-Converted["_close"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_close"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_close"].TextSize = 20
-Converted["_close"].BackgroundColor3 = Color3.fromRGB(203.00000309944153, 203.00000309944153, 203.00000309944153)
+Converted["_close"].BackgroundColor3 = Color3.fromRGB(203.00001829862595, 25.000002309679985, 25.000002309679985)
 Converted["_close"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_close"].BorderSizePixel = 0
 Converted["_close"].Position = UDim2.new(0.920000017, 0, 0.0649999976, 0)
@@ -325,12 +408,15 @@ Converted["_close"].Size = UDim2.new(0, 20, 0, 20)
 Converted["_close"].Name = "close"
 Converted["_close"].Parent = Converted["_Topbar"]
 
-Converted["_UICorner2"].BottomLeftRadius = UDim.new(1, 8)
-Converted["_UICorner2"].BottomRightRadius = UDim.new(1, 8)
-Converted["_UICorner2"].CornerRadius = UDim.new(1, 8)
-Converted["_UICorner2"].TopLeftRadius = UDim.new(1, 8)
-Converted["_UICorner2"].TopRightRadius = UDim.new(1, 8)
-Converted["_UICorner2"].Parent = Converted["_close"]
+Converted["_UICorner5"].BottomLeftRadius = UDim.new(1, 8)
+Converted["_UICorner5"].BottomRightRadius = UDim.new(1, 8)
+Converted["_UICorner5"].CornerRadius = UDim.new(1, 8)
+Converted["_UICorner5"].TopLeftRadius = UDim.new(1, 8)
+Converted["_UICorner5"].TopRightRadius = UDim.new(1, 8)
+Converted["_UICorner5"].Parent = Converted["_close"]
+
+Converted["_UIShadow"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow"].Parent = Converted["_close"]
 
 Converted["_min"].Font = Enum.Font.SourceSans
 Converted["_min"].Text = "-"
@@ -344,12 +430,12 @@ Converted["_min"].Size = UDim2.new(0, 20, 0, 20)
 Converted["_min"].Name = "min"
 Converted["_min"].Parent = Converted["_Topbar"]
 
-Converted["_UICorner3"].BottomLeftRadius = UDim.new(1, 8)
-Converted["_UICorner3"].BottomRightRadius = UDim.new(1, 8)
-Converted["_UICorner3"].CornerRadius = UDim.new(1, 8)
-Converted["_UICorner3"].TopLeftRadius = UDim.new(1, 8)
-Converted["_UICorner3"].TopRightRadius = UDim.new(1, 8)
-Converted["_UICorner3"].Parent = Converted["_min"]
+Converted["_UICorner6"].BottomLeftRadius = UDim.new(1, 8)
+Converted["_UICorner6"].BottomRightRadius = UDim.new(1, 8)
+Converted["_UICorner6"].CornerRadius = UDim.new(1, 8)
+Converted["_UICorner6"].TopLeftRadius = UDim.new(1, 8)
+Converted["_UICorner6"].TopRightRadius = UDim.new(1, 8)
+Converted["_UICorner6"].Parent = Converted["_min"]
 
 Converted["_Title"].Font = Enum.Font.SourceSans
 Converted["_Title"].Text = "xd gui 1.0"
@@ -384,43 +470,43 @@ Converted["_Beta"].Size = UDim2.new(0, 31, 0, 13)
 Converted["_Beta"].Name = "Beta"
 Converted["_Beta"].Parent = Converted["_Topbar"]
 
-Converted["_UICorner4"].BottomLeftRadius = UDim.new(0, 4)
-Converted["_UICorner4"].BottomRightRadius = UDim.new(0, 4)
-Converted["_UICorner4"].CornerRadius = UDim.new(0, 4)
-Converted["_UICorner4"].TopLeftRadius = UDim.new(0, 4)
-Converted["_UICorner4"].TopRightRadius = UDim.new(0, 4)
-Converted["_UICorner4"].Parent = Converted["_Beta"]
+Converted["_UICorner7"].BottomLeftRadius = UDim.new(0, 4)
+Converted["_UICorner7"].BottomRightRadius = UDim.new(0, 4)
+Converted["_UICorner7"].CornerRadius = UDim.new(0, 4)
+Converted["_UICorner7"].TopLeftRadius = UDim.new(0, 4)
+Converted["_UICorner7"].TopRightRadius = UDim.new(0, 4)
+Converted["_UICorner7"].Parent = Converted["_Beta"]
 
 Converted["_UIPadding5"].PaddingBottom = UDim.new(0, 14)
 Converted["_UIPadding5"].PaddingRight = UDim.new(0, 4)
 Converted["_UIPadding5"].Parent = Converted["_Beta"]
 
-Converted["_UIStroke4"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke4"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke4"].Parent = Converted["_Beta"]
+Converted["_UIStroke7"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke7"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke7"].Parent = Converted["_Beta"]
 
-Converted["_Menu"].Image = "rbxasset://textures/MenuBar/icon_menu.png"
-Converted["_Menu"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Menu"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/MenuBar/icon_menu.png}
-Converted["_Menu"].ScaleType = Enum.ScaleType.Slice
-Converted["_Menu"].SliceCenter = Rect.new(26, 26, 26, 26)
-Converted["_Menu"].TileSize = UDim2.new(1, 5, 1, 5)
-Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Menu"].BackgroundTransparency = 1
+Converted["_MenuButton"].Image = "rbxasset://textures/MenuBar/icon_menu.png"
+Converted["_MenuButton"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MenuButton"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/MenuBar/icon_menu.png}
+Converted["_MenuButton"].ScaleType = Enum.ScaleType.Slice
+Converted["_MenuButton"].SliceCenter = Rect.new(26, 26, 26, 26)
+Converted["_MenuButton"].TileSize = UDim2.new(1, 5, 1, 5)
+Converted["_MenuButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MenuButton"].BackgroundTransparency = 1
+Converted["_MenuButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MenuButton"].BorderSizePixel = 0
+Converted["_MenuButton"].Size = UDim2.new(0, 25, 0, 25)
+Converted["_MenuButton"].Name = "MenuButton"
+Converted["_MenuButton"].Parent = Converted["_Topbar"]
+
+Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(255, 108.00000116229057, 108.00000116229057)
 Converted["_Menu"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Menu"].BorderSizePixel = 0
-Converted["_Menu"].Size = UDim2.new(0, 25, 0, 25)
+Converted["_Menu"].Position = UDim2.new(-0.307692319, 0, 1, 0)
+Converted["_Menu"].Size = UDim2.new(0, 100, 0, 175)
+Converted["_Menu"].Visible = false
 Converted["_Menu"].Name = "Menu"
 Converted["_Menu"].Parent = Converted["_Topbar"]
-
-Converted["_Menu1"].BackgroundColor3 = Color3.fromRGB(255, 108.00000116229057, 108.00000116229057)
-Converted["_Menu1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Menu1"].BorderSizePixel = 0
-Converted["_Menu1"].Position = UDim2.new(-0.307692319, 0, 1, 0)
-Converted["_Menu1"].Size = UDim2.new(0, 100, 0, 175)
-Converted["_Menu1"].Visible = false
-Converted["_Menu1"].Name = "Menu"
-Converted["_Menu1"].Parent = Converted["_Topbar"]
 
 Converted["_Label"].Font = Enum.Font.SourceSans
 Converted["_Label"].Text = "Menu"
@@ -434,10 +520,10 @@ Converted["_Label"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Label"].BorderSizePixel = 0
 Converted["_Label"].Size = UDim2.new(0, 100, 0, 24)
 Converted["_Label"].Name = "Label"
-Converted["_Label"].Parent = Converted["_Menu1"]
+Converted["_Label"].Parent = Converted["_Menu"]
 
 Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout1"].Parent = Converted["_Menu1"]
+Converted["_UIListLayout1"].Parent = Converted["_Menu"]
 
 Converted["_Home1"].Font = Enum.Font.SourceSans
 Converted["_Home1"].Text = "Home"
@@ -450,7 +536,7 @@ Converted["_Home1"].BorderSizePixel = 5
 Converted["_Home1"].Position = UDim2.new(0, 0, 0.148571432, 0)
 Converted["_Home1"].Size = UDim2.new(0, 100, 0, 30)
 Converted["_Home1"].Name = "Home"
-Converted["_Home1"].Parent = Converted["_Menu1"]
+Converted["_Home1"].Parent = Converted["_Menu"]
 
 Converted["_Actions"].Font = Enum.Font.SourceSans
 Converted["_Actions"].Text = "Actions"
@@ -463,7 +549,7 @@ Converted["_Actions"].BorderSizePixel = 5
 Converted["_Actions"].Position = UDim2.new(0, 0, 0.148571432, 0)
 Converted["_Actions"].Size = UDim2.new(0, 100, 0, 30)
 Converted["_Actions"].Name = "Actions"
-Converted["_Actions"].Parent = Converted["_Menu1"]
+Converted["_Actions"].Parent = Converted["_Menu"]
 
 Converted["_Cheats"].Font = Enum.Font.SourceSans
 Converted["_Cheats"].Text = "Cheats"
@@ -476,20 +562,20 @@ Converted["_Cheats"].BorderSizePixel = 5
 Converted["_Cheats"].Position = UDim2.new(0, 0, 0.148571432, 0)
 Converted["_Cheats"].Size = UDim2.new(0, 100, 0, 30)
 Converted["_Cheats"].Name = "Cheats"
-Converted["_Cheats"].Parent = Converted["_Menu1"]
+Converted["_Cheats"].Parent = Converted["_Menu"]
 
-Converted["_Humanoid"].Font = Enum.Font.SourceSans
-Converted["_Humanoid"].Text = "Humanoid"
-Converted["_Humanoid"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Humanoid"].TextSize = 14
-Converted["_Humanoid"].BackgroundColor3 = Color3.fromRGB(0, 18.000000827014446, 85.0000025331974)
-Converted["_Humanoid"].BorderColor3 = Color3.fromRGB(255, 108.00000116229057, 108.00000116229057)
-Converted["_Humanoid"].BorderMode = Enum.BorderMode.Inset
-Converted["_Humanoid"].BorderSizePixel = 5
-Converted["_Humanoid"].Position = UDim2.new(0, 0, 0.148571432, 0)
-Converted["_Humanoid"].Size = UDim2.new(0, 100, 0, 30)
-Converted["_Humanoid"].Name = "Humanoid"
-Converted["_Humanoid"].Parent = Converted["_Menu1"]
+Converted["_Humanoid1"].Font = Enum.Font.SourceSans
+Converted["_Humanoid1"].Text = "Humanoid"
+Converted["_Humanoid1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Humanoid1"].TextSize = 14
+Converted["_Humanoid1"].BackgroundColor3 = Color3.fromRGB(0, 18.000000827014446, 85.0000025331974)
+Converted["_Humanoid1"].BorderColor3 = Color3.fromRGB(255, 108.00000116229057, 108.00000116229057)
+Converted["_Humanoid1"].BorderMode = Enum.BorderMode.Inset
+Converted["_Humanoid1"].BorderSizePixel = 5
+Converted["_Humanoid1"].Position = UDim2.new(0, 0, 0.148571432, 0)
+Converted["_Humanoid1"].Size = UDim2.new(0, 100, 0, 30)
+Converted["_Humanoid1"].Name = "Humanoid"
+Converted["_Humanoid1"].Parent = Converted["_Menu"]
 
 Converted["_Abusive"].Font = Enum.Font.SourceSans
 Converted["_Abusive"].Text = "Abusive"
@@ -502,7 +588,7 @@ Converted["_Abusive"].BorderSizePixel = 5
 Converted["_Abusive"].Position = UDim2.new(0, 0, 0.148571432, 0)
 Converted["_Abusive"].Size = UDim2.new(0, 100, 0, 30)
 Converted["_Abusive"].Name = "Abusive"
-Converted["_Abusive"].Parent = Converted["_Menu1"]
+Converted["_Abusive"].Parent = Converted["_Menu"]
 
 Converted["_UIDragDetector"].DragUDim2 = UDim2.new(0, 155, 0, 26)
 Converted["_UIDragDetector"].Parent = Converted["_main"]
@@ -537,15 +623,15 @@ Converted["_Frame"].BorderSizePixel = 0
 Converted["_Frame"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner5"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner5"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner5"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner5"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner5"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner5"].Parent = Converted["_Frame"]
+Converted["_UICorner8"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner8"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner8"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner8"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner8"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner8"].Parent = Converted["_Frame"]
 
-Converted["_UIShadow"].BlurRadius = UDim.new(0, 20)
-Converted["_UIShadow"].Parent = Converted["_Frame"]
+Converted["_UIShadow1"].BlurRadius = UDim.new(0, 20)
+Converted["_UIShadow1"].Parent = Converted["_Frame"]
 
 Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Frame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -553,15 +639,15 @@ Converted["_Frame1"].BorderSizePixel = 0
 Converted["_Frame1"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame1"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner6"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner6"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner6"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner6"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner6"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner6"].Parent = Converted["_Frame1"]
+Converted["_UICorner9"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner9"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner9"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner9"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner9"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner9"].Parent = Converted["_Frame1"]
 
-Converted["_UIShadow1"].BlurRadius = UDim.new(0, 20)
-Converted["_UIShadow1"].Parent = Converted["_Frame1"]
+Converted["_UIShadow2"].BlurRadius = UDim.new(0, 20)
+Converted["_UIShadow2"].Parent = Converted["_Frame1"]
 
 Converted["_Frame2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Frame2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -569,26 +655,26 @@ Converted["_Frame2"].BorderSizePixel = 0
 Converted["_Frame2"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame2"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner7"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner7"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner7"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner7"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner7"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner7"].Parent = Converted["_Frame2"]
+Converted["_UICorner10"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner10"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner10"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner10"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner10"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner10"].Parent = Converted["_Frame2"]
 
-Converted["_UIShadow2"].BlurRadius = UDim.new(0, 20)
-Converted["_UIShadow2"].Parent = Converted["_Frame2"]
+Converted["_UIShadow3"].BlurRadius = UDim.new(0, 20)
+Converted["_UIShadow3"].Parent = Converted["_Frame2"]
 
 Converted["_UIListLayout2"].Padding = UDim.new(0, 13)
 Converted["_UIListLayout2"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout2"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner8"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner8"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner8"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner8"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner8"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner8"].Parent = Converted["_open"]
+Converted["_UICorner11"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner11"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner11"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner11"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner11"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner11"].Parent = Converted["_open"]
 
 Converted["_splash"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_splash"].BackgroundTransparency = 0.5
@@ -607,19 +693,19 @@ Converted["_Frame3"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_Frame3"].Size = UDim2.new(0, 250, 0, 225)
 Converted["_Frame3"].Parent = Converted["_splash"]
 
-Converted["_UICorner9"].BottomLeftRadius = UDim.new(0, 12)
-Converted["_UICorner9"].BottomRightRadius = UDim.new(0, 12)
-Converted["_UICorner9"].CornerRadius = UDim.new(0, 12)
-Converted["_UICorner9"].TopLeftRadius = UDim.new(0, 12)
-Converted["_UICorner9"].TopRightRadius = UDim.new(0, 12)
-Converted["_UICorner9"].Parent = Converted["_Frame3"]
+Converted["_UICorner12"].BottomLeftRadius = UDim.new(0, 12)
+Converted["_UICorner12"].BottomRightRadius = UDim.new(0, 12)
+Converted["_UICorner12"].CornerRadius = UDim.new(0, 12)
+Converted["_UICorner12"].TopLeftRadius = UDim.new(0, 12)
+Converted["_UICorner12"].TopRightRadius = UDim.new(0, 12)
+Converted["_UICorner12"].Parent = Converted["_Frame3"]
 
-Converted["_UIShadow3"].BlurRadius = UDim.new(0, 25)
-Converted["_UIShadow3"].Parent = Converted["_Frame3"]
+Converted["_UIShadow4"].BlurRadius = UDim.new(0, 25)
+Converted["_UIShadow4"].Parent = Converted["_Frame3"]
 
-Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke5"].Thickness = 0.5
-Converted["_UIStroke5"].Parent = Converted["_Frame3"]
+Converted["_UIStroke8"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke8"].Thickness = 0.5
+Converted["_UIStroke8"].Parent = Converted["_Frame3"]
 
 Converted["_TextLabel3"].Font = Enum.Font.Cartoon
 Converted["_TextLabel3"].Text = "loading..."
@@ -654,7 +740,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function BIWF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
+local function CWBIFR_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -688,7 +774,7 @@ local function BIWF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		textLabel.Text = randomMessage
 	end
 end
-local function EQFDA_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
+local function DCTYRLF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -708,7 +794,122 @@ local function EQFDA_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function LVHV_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
+local function CRCAE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Home"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.Visible = true
+end
+local function YQYO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_WalkSpeed"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local player = game.Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+			if humanoid then
+				local newSpeed = tonumber(textBox.Text)
+				if newSpeed then
+					humanoid.WalkSpeed = newSpeed
+					print("WalkSpeed changed to: " .. newSpeed)
+				else
+					warn("Please enter a valid number!")
+				end
+			end
+		end
+	end)
+end
+local function RDSLO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_JumpPower"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local player = game.Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+			if humanoid then
+				local newPower = tonumber(textBox.Text)
+				if newPower then
+					humanoid.UseJumpPower = true -- Ensures JumpPower mode is active
+					humanoid.JumpPower = newPower
+					print("JumpPower changed to: " .. newPower)
+				else
+					warn("Please enter a valid number!")
+				end
+			end
+		end
+	end)
+end
+local function UWSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_HipHeight"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local player = game.Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+			if humanoid then
+				local newHeight = tonumber(textBox.Text)
+				if newHeight then
+					humanoid.HipHeight = newHeight
+					print("HipHeight changed to: " .. newHeight)
+				else
+					warn("Please enter a valid number!")
+				end
+			end
+		end
+	end)
+end
+local function XAHZL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -727,7 +928,7 @@ local function LVHV_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.
 		ScreenGUI:Destroy()
 	end)
 end
-local function MWZLZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
+local function EKVOYBY_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -747,10 +948,10 @@ local function MWZLZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		mainFrame.Visible = false
 	end)
 end
-local function EZWBI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function TOUQQX_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
-    script.Parent = Converted["_Menu"]
+    script.Parent = Converted["_MenuButton"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -794,10 +995,10 @@ local function EZWBI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		end
 	end)
 end
-local function ZWTCP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function CAIRN_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
-    script.Parent = Converted["_Menu1"]
+    script.Parent = Converted["_Menu"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -810,7 +1011,7 @@ local function ZWTCP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 	local buttonContainer = script.Parent
 	
 	-- Assumes "Content" is a sibling of the button container (sharing the same parent)
-	local contentFrame = buttonContainer.Parent:FindFirstChild("Content")
+	local contentFrame = buttonContainer.Parent.Parent:FindFirstChild("Content")
 	local presetFrames = contentFrame and contentFrame:FindFirstChild("preset-frames")
 	
 	if presetFrames then
@@ -837,7 +1038,7 @@ local function ZWTCP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		end
 	end
 end
-local function GHVBKRW_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
+local function AYWLBL_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -859,7 +1060,7 @@ local function GHVBKRW_fake_script() -- Fake Script: StarterGui.xd gui.open.Loca
 		main.Visible = not main.Visible
 	end)
 end
-local function LDDWY_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
+local function BNRYKWE_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_splash"]
@@ -888,11 +1089,15 @@ local function LDDWY_fake_script() -- Fake Script: StarterGui.xd gui.splash.Loca
 	main.Visible = true
 end
 
-coroutine.wrap(BIWF_fake_script)()
-coroutine.wrap(EQFDA_fake_script)()
-coroutine.wrap(LVHV_fake_script)()
-coroutine.wrap(MWZLZ_fake_script)()
-coroutine.wrap(EZWBI_fake_script)()
-coroutine.wrap(ZWTCP_fake_script)()
-coroutine.wrap(GHVBKRW_fake_script)()
-coroutine.wrap(LDDWY_fake_script)()
+coroutine.wrap(CWBIFR_fake_script)()
+coroutine.wrap(DCTYRLF_fake_script)()
+coroutine.wrap(CRCAE_fake_script)()
+coroutine.wrap(YQYO_fake_script)()
+coroutine.wrap(RDSLO_fake_script)()
+coroutine.wrap(UWSK_fake_script)()
+coroutine.wrap(XAHZL_fake_script)()
+coroutine.wrap(EKVOYBY_fake_script)()
+coroutine.wrap(TOUQQX_fake_script)()
+coroutine.wrap(CAIRN_fake_script)()
+coroutine.wrap(AYWLBL_fake_script)()
+coroutine.wrap(BNRYKWE_fake_script)()
