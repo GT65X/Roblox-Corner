@@ -46,6 +46,7 @@ local Converted = {
 	["_UICorner4"] = Instance.new("UICorner");
 	["_UIStroke6"] = Instance.new("UIStroke");
 	["_LocalScript5"] = Instance.new("LocalScript");
+	["_Corner blocker"] = Instance.new("Frame");
 	["_Topbar"] = Instance.new("Frame");
 	["_close"] = Instance.new("TextButton");
 	["_UICorner5"] = Instance.new("UICorner");
@@ -60,8 +61,6 @@ local Converted = {
 	["_UICorner7"] = Instance.new("UICorner");
 	["_UIPadding5"] = Instance.new("UIPadding");
 	["_UIStroke7"] = Instance.new("UIStroke");
-	["_MenuButton"] = Instance.new("ImageButton");
-	["_LocalScript8"] = Instance.new("LocalScript");
 	["_Menu"] = Instance.new("Frame");
 	["_Label"] = Instance.new("TextLabel");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
@@ -70,7 +69,11 @@ local Converted = {
 	["_Cheats"] = Instance.new("TextButton");
 	["_Humanoid1"] = Instance.new("TextButton");
 	["_Abusive"] = Instance.new("TextButton");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_MenuButton"] = Instance.new("TextButton");
 	["_LocalScript9"] = Instance.new("LocalScript");
+	["_DarkenEffect"] = Instance.new("Frame");
+	["_ClickBlocker1"] = Instance.new("TextButton");
 	["_UIDragDetector"] = Instance.new("UIDragDetector");
 	["_open"] = Instance.new("TextButton");
 	["_Menu_img"] = Instance.new("Frame");
@@ -103,7 +106,7 @@ Converted["_xd gui"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 Converted["_xd gui"].ResetOnSpawn = false
 Converted["_xd gui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_xd gui"].Name = "xd gui"
-Converted["_xd gui"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Converted["_xd gui"].Parent = game:GetService("CoreGui")
 
 Converted["_main"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_main"].BackgroundColor3 = Color3.fromRGB(203.00000309944153, 203.00000309944153, 203.00000309944153)
@@ -146,9 +149,9 @@ Converted["_ClickBlocker"].Parent = Converted["_Content"]
 
 Converted["_UICorner1"].BottomLeftRadius = UDim.new(0, 3)
 Converted["_UICorner1"].BottomRightRadius = UDim.new(0, 3)
-Converted["_UICorner1"].CornerRadius = UDim.new(0, 0)
-Converted["_UICorner1"].TopLeftRadius = UDim.new(0, 0)
-Converted["_UICorner1"].TopRightRadius = UDim.new(0, 0)
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner1"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner1"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner1"].Parent = Converted["_Content"]
 
 Converted["_preset-frames"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -388,6 +391,13 @@ Converted["_UICorner4"].Parent = Converted["_HipHeight"]
 Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke6"].Parent = Converted["_HipHeight"]
 
+Converted["_Corner blocker"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Corner blocker"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Corner blocker"].BorderSizePixel = 0
+Converted["_Corner blocker"].Size = UDim2.new(0, 325, 0, 6)
+Converted["_Corner blocker"].Name = "Corner blocker"
+Converted["_Corner blocker"].Parent = Converted["_Content"]
+
 Converted["_Topbar"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Topbar"].BackgroundTransparency = 1
 Converted["_Topbar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -485,20 +495,6 @@ Converted["_UIStroke7"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke7"].Color = Color3.fromRGB(255, 255, 255)
 Converted["_UIStroke7"].Parent = Converted["_Beta"]
 
-Converted["_MenuButton"].Image = "rbxasset://textures/MenuBar/icon_menu.png"
-Converted["_MenuButton"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_MenuButton"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/MenuBar/icon_menu.png}
-Converted["_MenuButton"].ScaleType = Enum.ScaleType.Slice
-Converted["_MenuButton"].SliceCenter = Rect.new(26, 26, 26, 26)
-Converted["_MenuButton"].TileSize = UDim2.new(1, 5, 1, 5)
-Converted["_MenuButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_MenuButton"].BackgroundTransparency = 1
-Converted["_MenuButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_MenuButton"].BorderSizePixel = 0
-Converted["_MenuButton"].Size = UDim2.new(0, 25, 0, 25)
-Converted["_MenuButton"].Name = "MenuButton"
-Converted["_MenuButton"].Parent = Converted["_Topbar"]
-
 Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(255, 108.00000116229057, 108.00000116229057)
 Converted["_Menu"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Menu"].BorderSizePixel = 0
@@ -589,6 +585,41 @@ Converted["_Abusive"].Position = UDim2.new(0, 0, 0.148571432, 0)
 Converted["_Abusive"].Size = UDim2.new(0, 100, 0, 30)
 Converted["_Abusive"].Name = "Abusive"
 Converted["_Abusive"].Parent = Converted["_Menu"]
+
+Converted["_MenuButton"].Font = Enum.Font.Roboto
+Converted["_MenuButton"].Text = "≡"
+Converted["_MenuButton"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MenuButton"].TextSize = 30
+Converted["_MenuButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MenuButton"].BackgroundTransparency = 1
+Converted["_MenuButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MenuButton"].BorderSizePixel = 0
+Converted["_MenuButton"].Size = UDim2.new(0, 25, 0, 25)
+Converted["_MenuButton"].Name = "MenuButton"
+Converted["_MenuButton"].Parent = Converted["_Topbar"]
+
+Converted["_DarkenEffect"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DarkenEffect"].BackgroundTransparency = 1
+Converted["_DarkenEffect"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DarkenEffect"].BorderSizePixel = 0
+Converted["_DarkenEffect"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_DarkenEffect"].Size = UDim2.new(0, 325, 0, 175)
+Converted["_DarkenEffect"].Visible = false
+Converted["_DarkenEffect"].ZIndex = 0
+Converted["_DarkenEffect"].Name = "DarkenEffect"
+Converted["_DarkenEffect"].Parent = Converted["_Topbar"]
+
+Converted["_ClickBlocker1"].Font = Enum.Font.SourceSans
+Converted["_ClickBlocker1"].Text = ""
+Converted["_ClickBlocker1"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ClickBlocker1"].TextSize = 14
+Converted["_ClickBlocker1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ClickBlocker1"].BackgroundTransparency = 1
+Converted["_ClickBlocker1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ClickBlocker1"].BorderSizePixel = 0
+Converted["_ClickBlocker1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ClickBlocker1"].Name = "ClickBlocker"
+Converted["_ClickBlocker1"].Parent = Converted["_DarkenEffect"]
 
 Converted["_UIDragDetector"].DragUDim2 = UDim2.new(0, 155, 0, 26)
 Converted["_UIDragDetector"].Parent = Converted["_main"]
@@ -740,7 +771,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function CWBIFR_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
+local function PCSVCKY_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -774,7 +805,7 @@ local function CWBIFR_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 		textLabel.Text = randomMessage
 	end
 end
-local function DCTYRLF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
+local function ZKKH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -794,7 +825,7 @@ local function DCTYRLF_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function CRCAE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
+local function OXSQILC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -809,7 +840,7 @@ local function CRCAE_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 
 	script.Parent.Visible = true
 end
-local function YQYO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function QDPMDGH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -842,7 +873,7 @@ local function YQYO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end)
 end
-local function RDSLO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function FZQUOIG_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -876,7 +907,7 @@ local function RDSLO_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		end
 	end)
 end
-local function UWSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function EZWZOPV_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -909,7 +940,7 @@ local function UWSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end)
 end
-local function XAHZL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
+local function KZEKF_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -928,7 +959,7 @@ local function XAHZL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		ScreenGUI:Destroy()
 	end)
 end
-local function EKVOYBY_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
+local function YWVJNO_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -948,54 +979,7 @@ local function EKVOYBY_fake_script() -- Fake Script: StarterGui.xd gui.main.Topb
 		mainFrame.Visible = false
 	end)
 end
-local function TOUQQX_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_MenuButton"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local button = script.Parent
-	-- Finds a sibling frame named "Menu"
-	local menuFrame = button.Parent:WaitForChild("Menu")
-	local TweenService = game:GetService("TweenService")
-	
-	local isOpen = false
-	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	
-	-- Store the original position so it knows where to slide back to
-	-- (Make sure your Menu frame is already positioned where it should start closed!)
-	local closedPos = menuFrame.Position
-	local openPos = UDim2.new(closedPos.X.Scale, closedPos.X.Offset + 100, closedPos.Y.Scale, closedPos.Y.Offset)
-	
-	button.MouseButton1Click:Connect(function()
-		isOpen = not isOpen
-	
-		if isOpen then
-			-- Make it visible right before sliding out
-			menuFrame.Visible = true
-			local tween = TweenService:Create(menuFrame, tweenInfo, {Position = openPos})
-			tween:Play()
-		else
-			-- Slide back to the original position, then hide it once done
-			local tween = TweenService:Create(menuFrame, tweenInfo, {Position = closedPos})
-			tween:Play()
-	
-			task.delay(tweenInfo.Time, function()
-				if not isOpen then
-					menuFrame.Visible = false
-				end
-			end)
-		end
-	end)
-end
-local function CAIRN_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function BYWL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -1038,7 +1022,67 @@ local function CAIRN_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		end
 	end
 end
-local function AYWLBL_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
+local function DHHFPG_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_MenuButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local button = script.Parent
+	-- Finds a sibling frame named "Menu"
+	local menuFrame = button.Parent:WaitForChild("Menu")
+	-- Finds a sibling frame named "DarkenEffect" (adjust path if it's placed somewhere else)
+	local darkenEffect = button.Parent:WaitForChild("DarkenEffect")
+	
+	local TweenService = game:GetService("TweenService")
+	
+	local isOpen = false
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Store the original position so it knows where to slide back to
+	local closedPos = menuFrame.Position
+	local openPos = UDim2.new(closedPos.X.Scale, closedPos.X.Offset + 100, closedPos.Y.Scale, closedPos.Y.Offset)
+	
+	button.MouseButton1Click:Connect(function()
+		isOpen = not isOpen
+	
+		if isOpen then
+			-- Make frames visible right before tweening out
+			menuFrame.Visible = true
+			darkenEffect.Visible = true
+	
+			-- Tween menu position and darken effect transparency to 0.5
+			local menuTween = TweenService:Create(menuFrame, tweenInfo, {Position = openPos})
+			local darkenTween = TweenService:Create(darkenEffect, tweenInfo, {BackgroundTransparency = 0.5})
+	
+			menuTween:Play()
+			darkenTween:Play()
+		else
+			-- Tween menu back and darken effect transparency back to 1 (fully invisible)
+			local menuTween = TweenService:Create(menuFrame, tweenInfo, {Position = closedPos})
+			local darkenTween = TweenService:Create(darkenEffect, tweenInfo, {BackgroundTransparency = 1})
+	
+			menuTween:Play()
+			darkenTween:Play()
+	
+			-- Hide both frames once the tweens finish
+			task.delay(tweenInfo.Time, function()
+				if not isOpen then
+					menuFrame.Visible = false
+					darkenEffect.Visible = false
+				end
+			end)
+		end
+	end)
+end
+local function LJII_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -1060,7 +1104,7 @@ local function AYWLBL_fake_script() -- Fake Script: StarterGui.xd gui.open.Local
 		main.Visible = not main.Visible
 	end)
 end
-local function BNRYKWE_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
+local function MLMXMB_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_splash"]
@@ -1089,15 +1133,15 @@ local function BNRYKWE_fake_script() -- Fake Script: StarterGui.xd gui.splash.Lo
 	main.Visible = true
 end
 
-coroutine.wrap(CWBIFR_fake_script)()
-coroutine.wrap(DCTYRLF_fake_script)()
-coroutine.wrap(CRCAE_fake_script)()
-coroutine.wrap(YQYO_fake_script)()
-coroutine.wrap(RDSLO_fake_script)()
-coroutine.wrap(UWSK_fake_script)()
-coroutine.wrap(XAHZL_fake_script)()
-coroutine.wrap(EKVOYBY_fake_script)()
-coroutine.wrap(TOUQQX_fake_script)()
-coroutine.wrap(CAIRN_fake_script)()
-coroutine.wrap(AYWLBL_fake_script)()
-coroutine.wrap(BNRYKWE_fake_script)()
+coroutine.wrap(PCSVCKY_fake_script)()
+coroutine.wrap(ZKKH_fake_script)()
+coroutine.wrap(OXSQILC_fake_script)()
+coroutine.wrap(QDPMDGH_fake_script)()
+coroutine.wrap(FZQUOIG_fake_script)()
+coroutine.wrap(EZWZOPV_fake_script)()
+coroutine.wrap(KZEKF_fake_script)()
+coroutine.wrap(YWVJNO_fake_script)()
+coroutine.wrap(BYWL_fake_script)()
+coroutine.wrap(DHHFPG_fake_script)()
+coroutine.wrap(LJII_fake_script)()
+coroutine.wrap(MLMXMB_fake_script)()
