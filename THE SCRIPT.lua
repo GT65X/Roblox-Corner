@@ -771,7 +771,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function PCSVCKY_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
+local function MRBEF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -805,7 +805,7 @@ local function PCSVCKY_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		textLabel.Text = randomMessage
 	end
 end
-local function ZKKH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
+local function CSGE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -825,7 +825,7 @@ local function ZKKH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function OXSQILC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
+local function JVVO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -840,7 +840,7 @@ local function OXSQILC_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 
 	script.Parent.Visible = true
 end
-local function QDPMDGH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function FEMSX_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -873,7 +873,7 @@ local function QDPMDGH_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		end
 	end)
 end
-local function FZQUOIG_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function XLZZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -907,7 +907,7 @@ local function FZQUOIG_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		end
 	end)
 end
-local function EZWZOPV_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function SHTWMM_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -940,7 +940,7 @@ local function EZWZOPV_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		end
 	end)
 end
-local function KZEKF_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
+local function NDMI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -959,7 +959,7 @@ local function KZEKF_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		ScreenGUI:Destroy()
 	end)
 end
-local function YWVJNO_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
+local function WUYTM_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -979,7 +979,7 @@ local function YWVJNO_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		mainFrame.Visible = false
 	end)
 end
-local function BYWL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function SUEEO_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -1022,7 +1022,7 @@ local function BYWL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.
 		end
 	end
 end
-local function DHHFPG_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
+local function IFBQZEK_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_MenuButton"]
@@ -1082,7 +1082,7 @@ local function DHHFPG_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		end
 	end)
 end
-local function LJII_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
+local function CSGI_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -1104,7 +1104,7 @@ local function LJII_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalSc
 		main.Visible = not main.Visible
 	end)
 end
-local function MLMXMB_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
+local function YROEDK_fake_script() -- Fake Script: StarterGui.xd gui.splash.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_splash"]
@@ -1133,15 +1133,15 @@ local function MLMXMB_fake_script() -- Fake Script: StarterGui.xd gui.splash.Loc
 	main.Visible = true
 end
 
-coroutine.wrap(PCSVCKY_fake_script)()
-coroutine.wrap(ZKKH_fake_script)()
-coroutine.wrap(OXSQILC_fake_script)()
-coroutine.wrap(QDPMDGH_fake_script)()
-coroutine.wrap(FZQUOIG_fake_script)()
-coroutine.wrap(EZWZOPV_fake_script)()
-coroutine.wrap(KZEKF_fake_script)()
-coroutine.wrap(YWVJNO_fake_script)()
-coroutine.wrap(BYWL_fake_script)()
-coroutine.wrap(DHHFPG_fake_script)()
-coroutine.wrap(LJII_fake_script)()
-coroutine.wrap(MLMXMB_fake_script)()
+coroutine.wrap(MRBEF_fake_script)()
+coroutine.wrap(CSGE_fake_script)()
+coroutine.wrap(JVVO_fake_script)()
+coroutine.wrap(FEMSX_fake_script)()
+coroutine.wrap(XLZZ_fake_script)()
+coroutine.wrap(SHTWMM_fake_script)()
+coroutine.wrap(NDMI_fake_script)()
+coroutine.wrap(WUYTM_fake_script)()
+coroutine.wrap(SUEEO_fake_script)()
+coroutine.wrap(IFBQZEK_fake_script)()
+coroutine.wrap(CSGI_fake_script)()
+coroutine.wrap(YROEDK_fake_script)()
