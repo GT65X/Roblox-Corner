@@ -1134,7 +1134,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function EKHCE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
+local function EAWZKT_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -1168,7 +1168,7 @@ local function EKHCE_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		textLabel.Text = randomMessage
 	end
 end
-local function BOORDKC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
+local function YVVEXZN_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -1188,7 +1188,7 @@ local function BOORDKC_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function PGUGBB_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
+local function OJVN_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -1203,7 +1203,7 @@ local function PGUGBB_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 
 	script.Parent.Visible = true
 end
-local function RMBZOO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function TMGYEKJ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -1236,7 +1236,7 @@ local function RMBZOO_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 		end
 	end)
 end
-local function QPJXQSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function NOITTPB_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -1270,7 +1270,7 @@ local function QPJXQSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		end
 	end)
 end
-local function XGDKA_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function RKKI_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -1303,10 +1303,180 @@ local function XGDKA_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		end
 	end)
 end
-local function RWJT_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
+local function CLYK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local players = game:GetService("Players")
+	local runService = Service or game:GetService("RunService")
+	local localPlayer = players.LocalPlayer
+	local textBox = script.Parent
+	
+	local isRunning = false
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed or isRunning then return end
+	
+		local targetName = textBox.Text
+		if targetName == "" then return end
+		textBox.Text = ""
+	
+		-- Find the target player by name
+		local targetPlayer = nil
+		for _, p in ipairs(players:GetPlayers()) do
+			if string.lower(p.Name) == string.lower(targetName) then
+				targetPlayer = p
+				break
+			end
+		end
+	
+		if not targetPlayer then return end
+	
+		local myCharacter = localPlayer.Character
+		local targetCharacter = targetPlayer.Character
+		if not myCharacter or not targetCharacter then return end
+	
+		local myRoot = myCharacter:FindFirstChild("HumanoidRootPart")
+		local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
+	
+		if not myRoot or not targetRoot then return end
+	
+		isRunning = true
+	
+		-- 1. Save your original position before doing anything
+		local originalCFrame = myRoot.CFrame
+	
+		-- 2. Turn off collision for ALL BaseParts in your character (Noclip)
+		for _, part in ipairs(myCharacter:GetDescendants()) do
+			if part:IsA("BasePart") then
+				part.CanCollide = false
+			end
+		end
+	
+		local connection
+	
+		local function cleanup()
+			if not isRunning then return end
+			isRunning = false
+	
+			if connection then
+				connection:Disconnect()
+				connection = nil
+			end
+	
+			if myRoot and myRoot.Parent then
+				-- Stop velocity
+				myRoot.AssemblyLinearVelocity = Vector3.zero
+				myRoot.AssemblyAngularVelocity = Vector3.zero
+	
+				-- Teleport you back to your original position
+				myRoot.CFrame = originalCFrame
+			end
+	
+			-- Restore collision for ALL BaseParts in your character
+			if myCharacter and myCharacter.Parent then
+				for _, part in ipairs(myCharacter:GetDescendants()) do
+					if part:IsA("BasePart") then
+						part.CanCollide = true
+					end
+				end
+			end
+		end
+	
+		-- 3. Continuously lock to them, apply fling velocity, and check their velocity magnitude
+		connection = runService.RenderStepped:Connect(function(dt)
+			if not myCharacter.Parent or not targetCharacter.Parent or not myRoot.Parent or not targetRoot.Parent then
+				cleanup()
+				return
+			end
+	
+			-- Check if the target's current velocity magnitude has reached 50 or higher
+			if targetRoot.AssemblyLinearVelocity.Magnitude >= 50 then
+				cleanup()
+				return
+			end
+	
+			-- Glue your position to theirs
+			myRoot.CFrame = targetRoot.CFrame
+	
+			-- Apply extreme velocity for touch flinging
+			myRoot.AssemblyLinearVelocity = Vector3.new(99999, 99999, 99999)
+			myRoot.AssemblyAngularVelocity = Vector3.new(50000, 50000, 50000)
+		end)
+	end)
+end
+local function KDEVQQW_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local button = script.Parent
+	local players = game:GetService("Players")
+	local runService = game:GetService("RunService")
+	local player = players.LocalPlayer
+	
+	local isNoClip = false
+	local flingConnection = nil
+	
+	button.MouseButton1Click:Connect(function()
+		isNoClip = not isNoClip
+	
+		local character = player.Character
+		if not character then return end
+	
+		-- Toggle CanCollide for every BasePart in the character
+		for _, part in ipairs(character:GetDescendants()) do
+			if part:IsA("BasePart") then
+				part.CanCollide = not isNoClip
+			end
+		end
+	
+		local rootPart = character:FindFirstChild("HumanoidRootPart")
+	
+		if isNoClip then
+			button.Text = "Noclip & Fling: ON"
+	
+			-- Start the touch fling loop
+			flingConnection = runService.RenderStepped:Connect(function(dt)
+				if character and rootPart and rootPart.Parent then
+					rootPart.AssemblyAngularVelocity = Vector3.new(0, 50000, 0)
+				end
+			end)
+		else
+			button.Text = "Noclip & Fling: OFF"
+	
+			if flingConnection then
+				flingConnection:Disconnect()
+				flingConnection = nil
+			end
+	
+			if rootPart and rootPart.Parent then
+				rootPart.AssemblyAngularVelocity = Vector3.zero
+			end
+		end
+	end)
+end
+local function HNMHW_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextBox1"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -1347,199 +1517,16 @@ local function RWJT_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 	
 		local myRoot = myCharacter:FindFirstChild("HumanoidRootPart")
 		local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
-		if not myRoot or not targetRoot then return end
-	
-		isRunning = true
-	
-		-- 1. Save your original position before doing anything
-		local originalCFrame = myRoot.CFrame
-	
-		-- 2. Capture the target's starting position to detect when they move
-		local initialTargetPos = targetRoot.Position
-	
-		-- 3. Optionally turn off collision so you don't block them
-		for _, part in ipairs(myCharacter:GetDescendants()) do
-			if part:IsA("BasePart") then
-				part.CanCollide = false
-			end
-		end
-	
-		-- 4. Continuously lock to them and apply massive velocity every frame
-		local connection
-		connection = runService.RenderStepped:Connect(function(dt)
-			-- Check if characters/roots still exist
-			if not myCharacter.Parent or not targetCharacter.Parent or not myRoot.Parent or not targetRoot.Parent then
-				cleanup()
-				return
-			end
-	
-			-- Check if the target player has moved away from their initial spot
-			local currentTargetPos = targetRoot.Position
-			if (currentTargetPos - initialTargetPos).Magnitude > 3 then
-				-- They moved! Trigger return
-				cleanup()
-				return
-			end
-	
-			-- Keep your position glued to theirs
-			myRoot.CFrame = targetRoot.CFrame
-	
-			-- Give yourself extreme velocity to generate the fling/chaos effect
-			myRoot.AssemblyLinearVelocity = Vector3.new(99999, 99999, 99999)
-			myRoot.AssemblyAngularVelocity = Vector3.new(50000, 50000, 50000)
-		end)
-	
-		-- Cleanup function to restore everything back to normal
-		function cleanup()
-			if not isRunning then return end
-			isRunning = false
-	
-			if connection then
-				connection:Disconnect()
-				connection = nil
-			end
-	
-			if myRoot and myRoot.Parent then
-				-- Stop velocity
-				myRoot.AssemblyLinearVelocity = Vector3.zero
-				myRoot.AssemblyAngularVelocity = Vector3.zero
-	
-				-- Teleport you back to your original position
-				myRoot.CFrame = originalCFrame
-			end
-	
-			-- Restore collision
-			if myCharacter and myCharacter.Parent then
-				for _, part in ipairs(myCharacter:GetDescendants()) do
-					if part:IsA("BasePart") then
-						part.CanCollide = true
-					end
-				end
-			end
-		end
-	end)
-end
-local function YPJVU_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_TextButton"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local button = script.Parent
-	local players = game:GetService("Players")
-	local runService = game:GetService("RunService")
-	local player = players.LocalPlayer
-	
-	local isNoClip = false
-	local flingConnection = nil
-	
-	button.MouseButton1Click:Connect(function()
-		isNoClip = not isNoClip
-	
-		local character = player.Character
-		if not character then return end
-	
-		-- Find HumanoidRootPart and Torso parts (supports both R6 and R15)
-		local rootPart = character:FindFirstChild("HumanoidRootPart")
-		local torsoR6 = character:FindFirstChild("Torso")
-		local upperTorsoR15 = character:FindFirstChild("UpperTorso")
-		local lowerTorsoR15 = character:FindFirstChild("LowerTorso")
-	
-		local targetParts = {rootPart, torsoR6, upperTorsoR15, lowerTorsoR15}
-	
-		-- Toggle CanCollide
-		for _, part in ipairs(targetParts) do
-			if part and part:IsA("BasePart") then
-				part.CanCollide = not isNoClip
-			end
-		end
-	
-		if isNoClip then
-			button.Text = "Noclip & Fling: ON"
-	
-			-- Start the touch fling loop (spins the root part at extreme speeds)
-			flingConnection = runService.RenderStepped:Connect(function(dt)
-				if character and rootPart and rootPart.Parent then
-					-- High angular velocity forces physics engines to violently push colliding objects away
-					rootPart.AssemblyAngularVelocity = Vector3.new(0, 50000, 0)
-				end
-			end)
-		else
-			button.Text = "Noclip & Fling: OFF"
-	
-			-- Stop the fling loop and reset velocity
-			if flingConnection then
-				flingConnection:Disconnect()
-				flingConnection = nil
-			end
-	
-			if rootPart and rootPart.Parent then
-				rootPart.AssemblyAngularVelocity = Vector3.zero
-			end
-		end
-	end)
-end
-local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_TextBox1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local players = game:GetService("Players")
-	local runService = game:GetService("RunService")
-	local localPlayer = players.LocalPlayer
-	local textBox = script.Parent
-	
-	local isRunning = false
-	
-	textBox.FocusLost:Connect(function(enterPressed)
-		if not enterPressed or isRunning then return end
-	
-		local targetName = textBox.Text
-		if targetName == "" then return end
-		textBox.Text = ""
-	
-		-- Find the target player cleanly
-		local targetPlayer = nil
-		for _, p in ipairs(players:GetPlayers()) do
-			if string.lower(p.Name) == string.lower(targetName) then
-				targetPlayer = p
-				break
-			end
-		end
-	
-		if not targetPlayer then return end
-	
-		local myCharacter = localPlayer.Character
-		local targetCharacter = targetPlayer.Character
-		if not myCharacter or not targetCharacter then return end
-	
-		local myRoot = myCharacter:FindFirstChild("HumanoidRootPart")
-		local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
 		local targetHumanoid = targetCharacter:FindFirstChildOfClass("Humanoid")
 	
 		if not myRoot or not targetRoot or not targetHumanoid then return end
 	
 		isRunning = true
 	
-		-- 1. Save your original position
+		-- 1. Save original position
 		local originalCFrame = myRoot.CFrame
 	
-		-- 2. Turn off collision
+		-- 2. Turn off collision for ALL BaseParts in your character
 		for _, part in ipairs(myCharacter:GetDescendants()) do
 			if part:IsA("BasePart") then
 				part.CanCollide = false
@@ -1569,6 +1556,7 @@ local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 				myRoot.CFrame = originalCFrame
 			end
 	
+			-- 3. Restore collision for ALL BaseParts in your character
 			if myCharacter and myCharacter.Parent then
 				for _, part in ipairs(myCharacter:GetDescendants()) do
 					if part:IsA("BasePart") then
@@ -1578,7 +1566,7 @@ local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 			end
 		end
 	
-		-- 3. Watch for target health dropping to 0
+		-- Watch for target health dropping to 0
 		healthConnection = targetHumanoid.HealthChanged:Connect(function(health)
 			if health <= 0 then
 				cleanup()
@@ -1590,7 +1578,7 @@ local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 			return
 		end
 	
-		-- 4. Lock position and apply velocity loop
+		-- Lock position and apply extreme velocity loop
 		connection = runService.RenderStepped:Connect(function(dt)
 			if not myCharacter.Parent or not targetCharacter.Parent or not myRoot.Parent or not targetRoot.Parent then
 				cleanup()
@@ -1603,7 +1591,7 @@ local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		end)
 	end)
 end
-local function POUJ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.LocalScript
+local function ZTPE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Sidebar"]
@@ -1654,7 +1642,7 @@ local function POUJ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end
 end
-local function BLDCPI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
+local function NQJTYPW_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -1673,7 +1661,7 @@ local function BLDCPI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		ScreenGUI:Destroy()
 	end)
 end
-local function RWDP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
+local function MQBZS_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -1693,7 +1681,7 @@ local function RWDP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.
 		mainFrame.Visible = false
 	end)
 end
-local function KCFZLX_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function OMIISW_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -1736,7 +1724,7 @@ local function KCFZLX_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		end
 	end
 end
-local function XSNLIL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
+local function RCPN_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_MenuButton"]
@@ -1796,7 +1784,7 @@ local function XSNLIL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		end
 	end)
 end
-local function FDUD_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
+local function TAWEFPE_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -1819,18 +1807,18 @@ local function FDUD_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalSc
 	end)
 end
 
-coroutine.wrap(EKHCE_fake_script)()
-coroutine.wrap(BOORDKC_fake_script)()
-coroutine.wrap(PGUGBB_fake_script)()
-coroutine.wrap(RMBZOO_fake_script)()
-coroutine.wrap(QPJXQSK_fake_script)()
-coroutine.wrap(XGDKA_fake_script)()
-coroutine.wrap(RWJT_fake_script)()
-coroutine.wrap(YPJVU_fake_script)()
-coroutine.wrap(ZXLVX_fake_script)()
-coroutine.wrap(POUJ_fake_script)()
-coroutine.wrap(BLDCPI_fake_script)()
-coroutine.wrap(RWDP_fake_script)()
-coroutine.wrap(KCFZLX_fake_script)()
-coroutine.wrap(XSNLIL_fake_script)()
-coroutine.wrap(FDUD_fake_script)()
+coroutine.wrap(EAWZKT_fake_script)()
+coroutine.wrap(YVVEXZN_fake_script)()
+coroutine.wrap(OJVN_fake_script)()
+coroutine.wrap(TMGYEKJ_fake_script)()
+coroutine.wrap(NOITTPB_fake_script)()
+coroutine.wrap(RKKI_fake_script)()
+coroutine.wrap(CLYK_fake_script)()
+coroutine.wrap(KDEVQQW_fake_script)()
+coroutine.wrap(HNMHW_fake_script)()
+coroutine.wrap(ZTPE_fake_script)()
+coroutine.wrap(NQJTYPW_fake_script)()
+coroutine.wrap(MQBZS_fake_script)()
+coroutine.wrap(OMIISW_fake_script)()
+coroutine.wrap(RCPN_fake_script)()
+coroutine.wrap(TAWEFPE_fake_script)()
