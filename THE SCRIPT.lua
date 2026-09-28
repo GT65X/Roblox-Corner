@@ -1134,7 +1134,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function CIUEJH_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
+local function EKHCE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -1168,7 +1168,7 @@ local function CIUEJH_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 		textLabel.Text = randomMessage
 	end
 end
-local function HESBRC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
+local function BOORDKC_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -1188,7 +1188,7 @@ local function HESBRC_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function MITFMZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
+local function PGUGBB_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -1203,7 +1203,7 @@ local function MITFMZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 
 	script.Parent.Visible = true
 end
-local function NIDYF_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function RMBZOO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -1236,7 +1236,7 @@ local function NIDYF_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		end
 	end)
 end
-local function NVTU_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function QPJXQSK_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -1270,7 +1270,7 @@ local function NVTU_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end)
 end
-local function SGCE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function XGDKA_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -1303,7 +1303,7 @@ local function SGCE_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end)
 end
-local function MMGZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
+local function RWJT_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox"]
@@ -1419,7 +1419,7 @@ local function MMGZ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content
 		end
 	end)
 end
-local function UNDVO_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
+local function YPJVU_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -1486,7 +1486,7 @@ local function UNDVO_fake_script() -- Fake Script: StarterGui.xd gui.main.Conten
 		end
 	end)
 end
-local function BSEKJM_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
+local function ZXLVX_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox1"]
@@ -1513,11 +1513,8 @@ local function BSEKJM_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 		if targetName == "" then return end
 		textBox.Text = ""
 	
-		-- Find the target player
+		-- Find the target player cleanly
 		local targetPlayer = nil
-		local _, p in ipairs(players:GetPlayers()) do
-			-- looping to find match
-		end
 		for _, p in ipairs(players:GetPlayers()) do
 			if string.lower(p.Name) == string.lower(targetName) then
 				targetPlayer = p
@@ -1539,10 +1536,10 @@ local function BSEKJM_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 	
 		isRunning = true
 	
-		-- 1. Save your original position before doing anything
+		-- 1. Save your original position
 		local originalCFrame = myRoot.CFrame
 	
-		-- 2. Turn off collision so you don't block them or get stuck
+		-- 2. Turn off collision
 		for _, part in ipairs(myCharacter:GetDescendants()) do
 			if part:IsA("BasePart") then
 				part.CanCollide = false
@@ -1567,15 +1564,11 @@ local function BSEKJM_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 			end
 	
 			if myRoot and myRoot.Parent then
-				-- Stop velocity
 				myRoot.AssemblyLinearVelocity = Vector3.zero
 				myRoot.AssemblyAngularVelocity = Vector3.zero
-	
-				-- Teleport you back to your original position
 				myRoot.CFrame = originalCFrame
 			end
 	
-			-- Restore collision
 			if myCharacter and myCharacter.Parent then
 				for _, part in ipairs(myCharacter:GetDescendants()) do
 					if part:IsA("BasePart") then
@@ -1585,37 +1578,32 @@ local function BSEKJM_fake_script() -- Fake Script: StarterGui.xd gui.main.Conte
 			end
 		end
 	
-		-- 3. Watch for their health dropping to 0
+		-- 3. Watch for target health dropping to 0
 		healthConnection = targetHumanoid.HealthChanged:Connect(function(health)
 			if health <= 0 then
 				cleanup()
 			end
 		end)
 	
-		-- Also check immediately in case they were already dead or died instantly
 		if targetHumanoid.Health <= 0 then
 			cleanup()
 			return
 		end
 	
-		-- 4. Continuously lock to them and apply massive velocity every frame
+		-- 4. Lock position and apply velocity loop
 		connection = runService.RenderStepped:Connect(function(dt)
-			-- Check if characters/roots still exist
 			if not myCharacter.Parent or not targetCharacter.Parent or not myRoot.Parent or not targetRoot.Parent then
 				cleanup()
 				return
 			end
 	
-			-- Keep your position glued to theirs
 			myRoot.CFrame = targetRoot.CFrame
-	
-			-- Give yourself extreme velocity to generate the fling/chaos effect
 			myRoot.AssemblyLinearVelocity = Vector3.new(99999, 99999, 99999)
 			myRoot.AssemblyAngularVelocity = Vector3.new(50000, 50000, 50000)
 		end)
 	end)
 end
-local function GPQFSLA_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.LocalScript
+local function POUJ_fake_script() -- Fake Script: StarterGui.xd gui.main.Content.preset-frames.Abusive.Sidebar.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Sidebar"]
@@ -1666,7 +1654,7 @@ local function GPQFSLA_fake_script() -- Fake Script: StarterGui.xd gui.main.Cont
 		end
 	end
 end
-local function HYOW_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
+local function BLDCPI_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -1685,7 +1673,7 @@ local function HYOW_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.
 		ScreenGUI:Destroy()
 	end)
 end
-local function LJJB_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
+local function RWDP_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -1705,7 +1693,7 @@ local function LJJB_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.
 		mainFrame.Visible = false
 	end)
 end
-local function ENBAYS_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
+local function KCFZLX_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -1748,7 +1736,7 @@ local function ENBAYS_fake_script() -- Fake Script: StarterGui.xd gui.main.Topba
 		end
 	end
 end
-local function HXWDV_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
+local function XSNLIL_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_MenuButton"]
@@ -1808,7 +1796,7 @@ local function HXWDV_fake_script() -- Fake Script: StarterGui.xd gui.main.Topbar
 		end
 	end)
 end
-local function VWQH_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
+local function FDUD_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -1831,18 +1819,18 @@ local function VWQH_fake_script() -- Fake Script: StarterGui.xd gui.open.LocalSc
 	end)
 end
 
-coroutine.wrap(CIUEJH_fake_script)()
-coroutine.wrap(HESBRC_fake_script)()
-coroutine.wrap(MITFMZ_fake_script)()
-coroutine.wrap(NIDYF_fake_script)()
-coroutine.wrap(NVTU_fake_script)()
-coroutine.wrap(SGCE_fake_script)()
-coroutine.wrap(MMGZ_fake_script)()
-coroutine.wrap(UNDVO_fake_script)()
-coroutine.wrap(BSEKJM_fake_script)()
-coroutine.wrap(GPQFSLA_fake_script)()
-coroutine.wrap(HYOW_fake_script)()
-coroutine.wrap(LJJB_fake_script)()
-coroutine.wrap(ENBAYS_fake_script)()
-coroutine.wrap(HXWDV_fake_script)()
-coroutine.wrap(VWQH_fake_script)()
+coroutine.wrap(EKHCE_fake_script)()
+coroutine.wrap(BOORDKC_fake_script)()
+coroutine.wrap(PGUGBB_fake_script)()
+coroutine.wrap(RMBZOO_fake_script)()
+coroutine.wrap(QPJXQSK_fake_script)()
+coroutine.wrap(XGDKA_fake_script)()
+coroutine.wrap(RWJT_fake_script)()
+coroutine.wrap(YPJVU_fake_script)()
+coroutine.wrap(ZXLVX_fake_script)()
+coroutine.wrap(POUJ_fake_script)()
+coroutine.wrap(BLDCPI_fake_script)()
+coroutine.wrap(RWDP_fake_script)()
+coroutine.wrap(KCFZLX_fake_script)()
+coroutine.wrap(XSNLIL_fake_script)()
+coroutine.wrap(FDUD_fake_script)()
