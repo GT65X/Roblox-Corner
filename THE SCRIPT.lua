@@ -133,6 +133,8 @@ local Converted = {
 	["_UIPadding15"] = Instance.new("UIPadding");
 	["_LocalScript16"] = Instance.new("LocalScript");
 	["_TextLabel19"] = Instance.new("TextLabel");
+	["_ComingSoon"] = Instance.new("Frame");
+	["_TextLabel20"] = Instance.new("TextLabel");
 	["_Cornerblocker"] = Instance.new("Frame");
 	["_Topbar"] = Instance.new("Frame");
 	["_close"] = Instance.new("TextButton");
@@ -158,25 +160,35 @@ local Converted = {
 	["_Label"] = Instance.new("TextLabel");
 	["_UIListLayout2"] = Instance.new("UIListLayout");
 	["_Home1"] = Instance.new("TextButton");
-	["_Actions"] = Instance.new("TextButton");
-	["_Cheats"] = Instance.new("TextButton");
-	["_Humanoid1"] = Instance.new("TextButton");
-	["_Abusive1"] = Instance.new("TextButton");
-	["_LocalScript21"] = Instance.new("LocalScript");
 	["_UICorner15"] = Instance.new("UICorner");
-	["_LocalScript22"] = Instance.new("LocalScript");
 	["_UIShadow"] = Instance.new("UIShadow");
+	["_Actions"] = Instance.new("TextButton");
+	["_UICorner16"] = Instance.new("UICorner");
+	["_UIShadow1"] = Instance.new("UIShadow");
+	["_Cheats"] = Instance.new("TextButton");
+	["_UICorner17"] = Instance.new("UICorner");
+	["_UIShadow2"] = Instance.new("UIShadow");
+	["_Humanoid1"] = Instance.new("TextButton");
+	["_UICorner18"] = Instance.new("UICorner");
+	["_UIShadow3"] = Instance.new("UIShadow");
+	["_Abusive1"] = Instance.new("TextButton");
+	["_UICorner19"] = Instance.new("UICorner");
+	["_UIShadow4"] = Instance.new("UIShadow");
+	["_LocalScript21"] = Instance.new("LocalScript");
+	["_UICorner20"] = Instance.new("UICorner");
+	["_LocalScript22"] = Instance.new("LocalScript");
+	["_UIShadow5"] = Instance.new("UIShadow");
 	["_open"] = Instance.new("TextButton");
 	["_Menu_img"] = Instance.new("Frame");
 	["_Frame"] = Instance.new("Frame");
-	["_UICorner16"] = Instance.new("UICorner");
+	["_UICorner21"] = Instance.new("UICorner");
 	["_Frame1"] = Instance.new("Frame");
-	["_UICorner17"] = Instance.new("UICorner");
+	["_UICorner22"] = Instance.new("UICorner");
 	["_Frame2"] = Instance.new("Frame");
-	["_UICorner18"] = Instance.new("UICorner");
+	["_UICorner23"] = Instance.new("UICorner");
 	["_UIListLayout3"] = Instance.new("UIListLayout");
 	["_LocalScript23"] = Instance.new("LocalScript");
-	["_UIShadow1"] = Instance.new("UIShadow");
+	["_UIShadow6"] = Instance.new("UIShadow");
 }
 
 -- Properties:
@@ -318,6 +330,7 @@ Converted["_dragger"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_dragger"].BackgroundColor3 = Color3.fromRGB(200.00001847743988, 200.00001847743988, 200.00001847743988)
 Converted["_dragger"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_dragger"].BorderSizePixel = 0
+Converted["_dragger"].Position = UDim2.new(0.300000012, 0, 0.5, 0)
 Converted["_dragger"].Size = UDim2.new(0, 25, 0, 25)
 Converted["_dragger"].Name = "dragger"
 Converted["_dragger"].Parent = Converted["_Line"]
@@ -952,6 +965,7 @@ Converted["_Sidebar"].Name = "Sidebar"
 Converted["_Sidebar"].Parent = Converted["_Abusive"]
 
 Converted["_UIListLayout1"].Padding = UDim.new(0, 15)
+Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
 Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout1"].Parent = Converted["_Sidebar"]
 
@@ -964,7 +978,7 @@ Converted["_Fling"].TextWrapped = true
 Converted["_Fling"].BackgroundColor3 = Color3.fromRGB(98.00000935792923, 23.000000528991222, 23.000000528991222)
 Converted["_Fling"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Fling"].BorderSizePixel = 0
-Converted["_Fling"].Size = UDim2.new(0, 75, 0, 20)
+Converted["_Fling"].Size = UDim2.new(0, 70, 0, 20)
 Converted["_Fling"].Name = "Fling"
 Converted["_Fling"].Parent = Converted["_Sidebar"]
 
@@ -1006,7 +1020,7 @@ Converted["_Touch Fling"].TextWrapped = true
 Converted["_Touch Fling"].BackgroundColor3 = Color3.fromRGB(98.00000935792923, 23.000000528991222, 23.000000528991222)
 Converted["_Touch Fling"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Touch Fling"].BorderSizePixel = 0
-Converted["_Touch Fling"].Size = UDim2.new(0, 75, 0, 20)
+Converted["_Touch Fling"].Size = UDim2.new(0, 70, 0, 20)
 Converted["_Touch Fling"].Name = "Touch Fling"
 Converted["_Touch Fling"].Parent = Converted["_Sidebar"]
 
@@ -1049,7 +1063,7 @@ Converted["_Kill"].TextWrapped = true
 Converted["_Kill"].BackgroundColor3 = Color3.fromRGB(98.00000935792923, 23.000000528991222, 23.000000528991222)
 Converted["_Kill"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Kill"].BorderSizePixel = 0
-Converted["_Kill"].Size = UDim2.new(0, 75, 0, 20)
+Converted["_Kill"].Size = UDim2.new(0, 70, 0, 20)
 Converted["_Kill"].Name = "Kill"
 Converted["_Kill"].Parent = Converted["_Sidebar"]
 
@@ -1100,6 +1114,28 @@ Converted["_TextLabel19"].BorderSizePixel = 0
 Converted["_TextLabel19"].Position = UDim2.new(0.5, -20, 0.5, -75)
 Converted["_TextLabel19"].Size = UDim2.new(0, 275, 0, 20)
 Converted["_TextLabel19"].Parent = Converted["_Abusive"]
+
+Converted["_ComingSoon"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ComingSoon"].BackgroundTransparency = 1
+Converted["_ComingSoon"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ComingSoon"].BorderSizePixel = 0
+Converted["_ComingSoon"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ComingSoon"].Visible = false
+Converted["_ComingSoon"].Name = "ComingSoon"
+Converted["_ComingSoon"].Parent = Converted["_preset-frames"]
+
+Converted["_TextLabel20"].Font = Enum.Font.SourceSans
+Converted["_TextLabel20"].Text = "This tab has not been completed yet. It is coming soon."
+Converted["_TextLabel20"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel20"].TextScaled = true
+Converted["_TextLabel20"].TextSize = 14
+Converted["_TextLabel20"].TextWrapped = true
+Converted["_TextLabel20"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel20"].BackgroundTransparency = 1
+Converted["_TextLabel20"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel20"].BorderSizePixel = 0
+Converted["_TextLabel20"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_TextLabel20"].Parent = Converted["_ComingSoon"]
 
 Converted["_Cornerblocker"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Cornerblocker"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1169,7 +1205,7 @@ Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].BackgroundTransparency = 1
 Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Title"].BorderSizePixel = 0
-Converted["_Title"].Position = UDim2.new(0.0769230798, 0, 0, 0)
+Converted["_Title"].Position = UDim2.new(0, 35, 0, 0)
 Converted["_Title"].Size = UDim2.new(0, 80, 0, 25)
 Converted["_Title"].Name = "Title"
 Converted["_Title"].Parent = Converted["_Topbar"]
@@ -1216,6 +1252,7 @@ Converted["_MenuButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_MenuButton"].BackgroundTransparency = 1
 Converted["_MenuButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_MenuButton"].BorderSizePixel = 0
+Converted["_MenuButton"].Position = UDim2.new(0, 10, 0, 0)
 Converted["_MenuButton"].Size = UDim2.new(0, 25, 0, 25)
 Converted["_MenuButton"].Name = "MenuButton"
 Converted["_MenuButton"].Parent = Converted["_Topbar"]
@@ -1291,6 +1328,16 @@ Converted["_Home1"].Size = UDim2.new(0, 83, 0, 20)
 Converted["_Home1"].Name = "Home"
 Converted["_Home1"].Parent = Converted["_Menu"]
 
+Converted["_UICorner15"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner15"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner15"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner15"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner15"].TopRightRadius = UDim.new(0, 3)
+Converted["_UICorner15"].Parent = Converted["_Home1"]
+
+Converted["_UIShadow"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow"].Parent = Converted["_Home1"]
+
 Converted["_Actions"].Font = Enum.Font.SourceSans
 Converted["_Actions"].Text = "Actions"
 Converted["_Actions"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1303,6 +1350,16 @@ Converted["_Actions"].Position = UDim2.new(0.100000001, 0, 0.331428558, 0)
 Converted["_Actions"].Size = UDim2.new(0, 83, 0, 20)
 Converted["_Actions"].Name = "Actions"
 Converted["_Actions"].Parent = Converted["_Menu"]
+
+Converted["_UICorner16"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner16"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner16"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner16"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner16"].TopRightRadius = UDim.new(0, 3)
+Converted["_UICorner16"].Parent = Converted["_Actions"]
+
+Converted["_UIShadow1"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow1"].Parent = Converted["_Actions"]
 
 Converted["_Cheats"].Font = Enum.Font.SourceSans
 Converted["_Cheats"].Text = "Cheats"
@@ -1317,6 +1374,16 @@ Converted["_Cheats"].Size = UDim2.new(0, 83, 0, 20)
 Converted["_Cheats"].Name = "Cheats"
 Converted["_Cheats"].Parent = Converted["_Menu"]
 
+Converted["_UICorner17"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner17"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner17"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner17"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner17"].TopRightRadius = UDim.new(0, 3)
+Converted["_UICorner17"].Parent = Converted["_Cheats"]
+
+Converted["_UIShadow2"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow2"].Parent = Converted["_Cheats"]
+
 Converted["_Humanoid1"].Font = Enum.Font.SourceSans
 Converted["_Humanoid1"].Text = "Humanoid"
 Converted["_Humanoid1"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1329,6 +1396,16 @@ Converted["_Humanoid1"].Position = UDim2.new(0.100000001, 0, 0.639999986, 0)
 Converted["_Humanoid1"].Size = UDim2.new(0, 83, 0, 20)
 Converted["_Humanoid1"].Name = "Humanoid"
 Converted["_Humanoid1"].Parent = Converted["_Menu"]
+
+Converted["_UICorner18"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner18"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner18"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner18"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner18"].TopRightRadius = UDim.new(0, 3)
+Converted["_UICorner18"].Parent = Converted["_Humanoid1"]
+
+Converted["_UIShadow3"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow3"].Parent = Converted["_Humanoid1"]
 
 Converted["_Abusive1"].Font = Enum.Font.SourceSans
 Converted["_Abusive1"].Text = "Abusive"
@@ -1343,15 +1420,25 @@ Converted["_Abusive1"].Size = UDim2.new(0, 83, 0, 20)
 Converted["_Abusive1"].Name = "Abusive"
 Converted["_Abusive1"].Parent = Converted["_Menu"]
 
-Converted["_UICorner15"].BottomLeftRadius = UDim.new(0, 0)
-Converted["_UICorner15"].BottomRightRadius = UDim.new(0, 0)
-Converted["_UICorner15"].CornerRadius = UDim.new(0, 0)
-Converted["_UICorner15"].TopLeftRadius = UDim.new(0, 0)
-Converted["_UICorner15"].TopRightRadius = UDim.new(0, 0)
-Converted["_UICorner15"].Parent = Converted["_Menu"]
+Converted["_UICorner19"].BottomLeftRadius = UDim.new(0, 3)
+Converted["_UICorner19"].BottomRightRadius = UDim.new(0, 3)
+Converted["_UICorner19"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner19"].TopLeftRadius = UDim.new(0, 3)
+Converted["_UICorner19"].TopRightRadius = UDim.new(0, 3)
+Converted["_UICorner19"].Parent = Converted["_Abusive1"]
 
-Converted["_UIShadow"].BlurRadius = UDim.new(0, 10)
-Converted["_UIShadow"].Parent = Converted["_main"]
+Converted["_UIShadow4"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow4"].Parent = Converted["_Abusive1"]
+
+Converted["_UICorner20"].BottomLeftRadius = UDim.new(0, 0)
+Converted["_UICorner20"].BottomRightRadius = UDim.new(0, 0)
+Converted["_UICorner20"].CornerRadius = UDim.new(0, 0)
+Converted["_UICorner20"].TopLeftRadius = UDim.new(0, 0)
+Converted["_UICorner20"].TopRightRadius = UDim.new(0, 0)
+Converted["_UICorner20"].Parent = Converted["_Menu"]
+
+Converted["_UIShadow5"].BlurRadius = UDim.new(0, 10)
+Converted["_UIShadow5"].Parent = Converted["_main"]
 
 Converted["_open"].Font = Enum.Font.SourceSans
 Converted["_open"].Text = ""
@@ -1383,12 +1470,12 @@ Converted["_Frame"].BorderSizePixel = 0
 Converted["_Frame"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner16"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner16"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner16"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner16"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner16"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner16"].Parent = Converted["_Frame"]
+Converted["_UICorner21"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner21"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner21"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner21"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner21"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner21"].Parent = Converted["_Frame"]
 
 Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Frame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1396,12 +1483,12 @@ Converted["_Frame1"].BorderSizePixel = 0
 Converted["_Frame1"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame1"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner17"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner17"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner17"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner17"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner17"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner17"].Parent = Converted["_Frame1"]
+Converted["_UICorner22"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner22"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner22"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner22"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner22"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner22"].Parent = Converted["_Frame1"]
 
 Converted["_Frame2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Frame2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1409,20 +1496,20 @@ Converted["_Frame2"].BorderSizePixel = 0
 Converted["_Frame2"].Size = UDim2.new(0, 50, 0, 6)
 Converted["_Frame2"].Parent = Converted["_Menu_img"]
 
-Converted["_UICorner18"].BottomLeftRadius = UDim.new(0, 2)
-Converted["_UICorner18"].BottomRightRadius = UDim.new(0, 2)
-Converted["_UICorner18"].CornerRadius = UDim.new(0, 2)
-Converted["_UICorner18"].TopLeftRadius = UDim.new(0, 2)
-Converted["_UICorner18"].TopRightRadius = UDim.new(0, 2)
-Converted["_UICorner18"].Parent = Converted["_Frame2"]
+Converted["_UICorner23"].BottomLeftRadius = UDim.new(0, 2)
+Converted["_UICorner23"].BottomRightRadius = UDim.new(0, 2)
+Converted["_UICorner23"].CornerRadius = UDim.new(0, 2)
+Converted["_UICorner23"].TopLeftRadius = UDim.new(0, 2)
+Converted["_UICorner23"].TopRightRadius = UDim.new(0, 2)
+Converted["_UICorner23"].Parent = Converted["_Frame2"]
 
 Converted["_UIListLayout3"].Padding = UDim.new(0, 13)
 Converted["_UIListLayout3"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout3"].Parent = Converted["_Menu_img"]
 
-Converted["_UIShadow1"].BlurRadius = UDim.new(0, 20)
-Converted["_UIShadow1"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIShadow1"].Parent = Converted["_open"]
+Converted["_UIShadow6"].BlurRadius = UDim.new(0, 20)
+Converted["_UIShadow6"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIShadow6"].Parent = Converted["_open"]
 
 -- Fake Module Scripts:
 
@@ -1431,7 +1518,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function HJDQFVB_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.Activate.LocalScript
+local function MLCA_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.Activate.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Activate"]
@@ -1467,7 +1554,7 @@ local function HJDQFVB_fake_script() -- Fake Script: StarterGui.GUI.main.quickse
 		end
 	end)
 end
-local function ICTJ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.UICorner.LocalScript
+local function GNUX_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner1"]
@@ -1489,7 +1576,7 @@ local function ICTJ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksetti
 		corner1.BottomRightRadius = corner2.CornerRadius
 	end
 end
-local function TGMXZ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.LocalScript
+local function PEEB_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_settings"]
@@ -1505,7 +1592,7 @@ local function TGMXZ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 	script.Parent.Position = UDim2.new(1, 0,0, 25)
 	script.Parent.Visible = false
 end
-local function MDOPE_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.TextButton.LocalScript
+local function VYKEOW_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -1534,7 +1621,7 @@ local function MDOPE_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 		uiElement.Visible = false
 	end)
 end
-local function WXHCK_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.UIDragDetector.LocalScript
+local function BWOVZX_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.UIDragDetector.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UIDragDetector1"]
@@ -1550,7 +1637,7 @@ local function WXHCK_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 	local Bufferzone = script.Parent.Parent.Parent.Parent
 	script.Parent.BoundingUI = Bufferzone
 end
-local function JDDNPD_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.LocalScript
+local function CPAYM_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_dragger"]
@@ -1591,7 +1678,7 @@ local function JDDNPD_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 		warn("Script initialization failed: " .. tostring(err))
 	end
 end
-local function FUGI_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UICorner.LocalScript
+local function XHMB_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner4"]
@@ -1611,7 +1698,7 @@ local function FUGI_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UI
 		corner.CornerRadius = corner2.CornerRadius
 	end
 end
-local function HFNWIYE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Text.LocalScript
+local function EVKPX_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -1645,7 +1732,7 @@ local function HFNWIYE_fake_script() -- Fake Script: StarterGui.GUI.main.Content
 		textLabel.Text = randomMessage
 	end
 end
-local function DUJPJ_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Welcome.LocalScript
+local function ZTIBF_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -1665,7 +1752,7 @@ local function DUJPJ_fake_script() -- Fake Script: StarterGui.GUI.main.Content.p
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function XOOY_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.LocalScript
+local function JMOXMA_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -1680,7 +1767,7 @@ local function XOOY_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 
 	script.Parent.Visible = true
 end
-local function ONDW_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function PMLO_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -1713,7 +1800,7 @@ local function ONDW_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 		end
 	end)
 end
-local function ANPL_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function BKNFO_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -1747,7 +1834,7 @@ local function ANPL_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 		end
 	end)
 end
-local function UUMRZA_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function NAPRFC_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -1780,7 +1867,7 @@ local function UUMRZA_fake_script() -- Fake Script: StarterGui.GUI.main.Content.
 		end
 	end)
 end
-local function XQGT_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
+local function XVIILL_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox"]
@@ -1889,7 +1976,7 @@ local function XQGT_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 		end)
 	end)
 end
-local function VUVEYGG_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
+local function NDMM_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -1972,7 +2059,7 @@ local function VUVEYGG_fake_script() -- Fake Script: StarterGui.GUI.main.Content
 		end
 	end)
 end
-local function TRWGWE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
+local function LALUJDC_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox1"]
@@ -2070,7 +2157,7 @@ local function TRWGWE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.
 		end)
 	end)
 end
-local function QDPP_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.LocalScript
+local function KJTN_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Sidebar"]
@@ -2121,7 +2208,7 @@ local function QDPP_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 		end
 	end
 end
-local function UCTAFS_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.close.LocalScript
+local function DURD_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -2141,7 +2228,7 @@ local function UCTAFS_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.c
 	end)
 	--recycled code
 end
-local function DSUL_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min.LocalScript
+local function SXZT_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -2161,7 +2248,7 @@ local function DSUL_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min
 		mainFrame.Visible = false
 	end)
 end
-local function VUSRGK_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.MenuButton.LocalScript
+local function FTDPU_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_MenuButton"]
@@ -2221,7 +2308,7 @@ local function VUSRGK_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.M
 		end
 	end)
 end
-local function ZJFOF_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.DarkenEffect.UICorner.LocalScript
+local function SWBPZX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.DarkenEffect.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner14"]
@@ -2252,7 +2339,7 @@ local function ZJFOF_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Da
 		warn("Could not find UICorner four levels up!")
 	end
 end
-local function GVJILX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.LocalScript
+local function SLDIR_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -2278,6 +2365,11 @@ local function GVJILX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.M
 				-- Find a matching frame inside preset-frames with the exact same name
 				local targetFrame = presetFrames:FindFirstChild(child.Name)
 	
+				-- Fallback to "ComingSoon" if the specific frame doesn't exist
+				if not targetFrame then
+					targetFrame = presetFrames:FindFirstChild("ComingSoon")
+				end
+	
 				if targetFrame and targetFrame:IsA("GuiObject") then
 					child.MouseButton1Click:Connect(function()
 						-- Hide all frames inside preset-frames
@@ -2287,7 +2379,7 @@ local function GVJILX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.M
 							end
 						end
 	
-						-- Show only the matching frame
+						-- Show only the matching frame (or the ComingSoon frame)
 						targetFrame.Visible = true
 					end)
 				end
@@ -2295,10 +2387,10 @@ local function GVJILX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.M
 		end
 	end
 end
-local function DHVWZRD_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.UICorner.LocalScript
+local function QTHB_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
-    script.Parent = Converted["_UICorner15"]
+    script.Parent = Converted["_UICorner20"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -2325,7 +2417,7 @@ local function DHVWZRD_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.
 		warn("Could not find UICorner four levels up!")
 	end
 end
-local function COML_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScript
+local function TQSNBY_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -2348,27 +2440,27 @@ local function COML_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScrip
 	end)
 end
 
-coroutine.wrap(HJDQFVB_fake_script)()
-coroutine.wrap(ICTJ_fake_script)()
-coroutine.wrap(TGMXZ_fake_script)()
-coroutine.wrap(MDOPE_fake_script)()
-coroutine.wrap(WXHCK_fake_script)()
-coroutine.wrap(JDDNPD_fake_script)()
-coroutine.wrap(FUGI_fake_script)()
-coroutine.wrap(HFNWIYE_fake_script)()
-coroutine.wrap(DUJPJ_fake_script)()
-coroutine.wrap(XOOY_fake_script)()
-coroutine.wrap(ONDW_fake_script)()
-coroutine.wrap(ANPL_fake_script)()
-coroutine.wrap(UUMRZA_fake_script)()
-coroutine.wrap(XQGT_fake_script)()
-coroutine.wrap(VUVEYGG_fake_script)()
-coroutine.wrap(TRWGWE_fake_script)()
-coroutine.wrap(QDPP_fake_script)()
-coroutine.wrap(UCTAFS_fake_script)()
-coroutine.wrap(DSUL_fake_script)()
-coroutine.wrap(VUSRGK_fake_script)()
-coroutine.wrap(ZJFOF_fake_script)()
-coroutine.wrap(GVJILX_fake_script)()
-coroutine.wrap(DHVWZRD_fake_script)()
-coroutine.wrap(COML_fake_script)()
+coroutine.wrap(MLCA_fake_script)()
+coroutine.wrap(GNUX_fake_script)()
+coroutine.wrap(PEEB_fake_script)()
+coroutine.wrap(VYKEOW_fake_script)()
+coroutine.wrap(BWOVZX_fake_script)()
+coroutine.wrap(CPAYM_fake_script)()
+coroutine.wrap(XHMB_fake_script)()
+coroutine.wrap(EVKPX_fake_script)()
+coroutine.wrap(ZTIBF_fake_script)()
+coroutine.wrap(JMOXMA_fake_script)()
+coroutine.wrap(PMLO_fake_script)()
+coroutine.wrap(BKNFO_fake_script)()
+coroutine.wrap(NAPRFC_fake_script)()
+coroutine.wrap(XVIILL_fake_script)()
+coroutine.wrap(NDMM_fake_script)()
+coroutine.wrap(LALUJDC_fake_script)()
+coroutine.wrap(KJTN_fake_script)()
+coroutine.wrap(DURD_fake_script)()
+coroutine.wrap(SXZT_fake_script)()
+coroutine.wrap(FTDPU_fake_script)()
+coroutine.wrap(SWBPZX_fake_script)()
+coroutine.wrap(SLDIR_fake_script)()
+coroutine.wrap(QTHB_fake_script)()
+coroutine.wrap(TQSNBY_fake_script)()
