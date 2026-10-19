@@ -127,7 +127,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function DVLW_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function PZTMVF_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -172,7 +172,7 @@ local function DVLW_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fra
 				isViewingPet = true
 				button.Text = "View Pet: on"
 				camera.CameraSubject = cameraTarget
-				camera.CameraOffset = Vector3.new(0, 3.5, 0)
+				humanoid.CameraOffset = Vector3.new(0, 1.5, 0)
 			else
 				-- Failed to find folder, pet, or valid part; trigger notification
 				pcall(function()
@@ -191,7 +191,7 @@ local function DVLW_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fra
 		end
 	end)
 end
-local function WUYX_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function OSKZQ_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -219,5 +219,5 @@ local function WUYX_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fra
 	end)
 end
 
-coroutine.wrap(DVLW_fake_script)()
-coroutine.wrap(WUYX_fake_script)()
+coroutine.wrap(PZTMVF_fake_script)()
+coroutine.wrap(OSKZQ_fake_script)()
