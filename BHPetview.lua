@@ -172,7 +172,7 @@ local function DVLW_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fra
 				isViewingPet = true
 				button.Text = "View Pet: on"
 				camera.CameraSubject = cameraTarget
-				camera.CameraOffset = Vector3.new(0, 1.5, 0)
+				camera.CameraOffset = Vector3.new(0, 3.5, 0)
 			else
 				-- Failed to find folder, pet, or valid part; trigger notification
 				pcall(function()
