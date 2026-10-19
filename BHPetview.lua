@@ -12,6 +12,7 @@ local Converted = {
 	["_Frame2"] = Instance.new("Frame");
 	["_UIGradient"] = Instance.new("UIGradient");
 	["_LocalScript"] = Instance.new("LocalScript");
+	["_UIPadding1"] = Instance.new("UIPadding");
 	["_Frame3"] = Instance.new("Frame");
 	["_UIListLayout"] = Instance.new("UIListLayout");
 	["_TextButton1"] = Instance.new("TextButton");
@@ -28,7 +29,7 @@ Converted["_ScreenGui"].Parent = game:GetService("CoreGui")
 Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(114.00000840425491, 199.00001853704453, 255)
 Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Frame"].BorderSizePixel = 0
-Converted["_Frame"].Size = UDim2.new(0, 145, 0, 110)
+Converted["_Frame"].Size = UDim2.new(0, 145, 0, 95)
 Converted["_Frame"].Parent = Converted["_ScreenGui"]
 
 Converted["_UIPadding"].PaddingBottom = UDim.new(0, 7)
@@ -48,11 +49,9 @@ Converted["_TextButton"].Font = Enum.Font.SourceSans
 Converted["_TextButton"].Text = "View Pet: off"
 Converted["_TextButton"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextButton"].TextSize = 14
-Converted["_TextButton"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(180.00000447034836, 180.00000447034836, 180.00000447034836)
 Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextButton"].BorderSizePixel = 0
-Converted["_TextButton"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_TextButton"].Size = UDim2.new(0, 110, 0, 42)
 Converted["_TextButton"].Parent = Converted["_Frame1"]
 
@@ -73,6 +72,12 @@ Converted["_UIGradient"].Transparency = NumberSequence.new{
 	NumberSequenceKeypoint.new(1, 1)
 }
 Converted["_UIGradient"].Parent = Converted["_Frame2"]
+
+Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 10)
+Converted["_UIPadding1"].PaddingRight = UDim.new(0, 10)
+Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
+Converted["_UIPadding1"].Parent = Converted["_Frame1"]
 
 Converted["_Frame3"].AnchorPoint = Vector2.new(1, 0)
 Converted["_Frame3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -101,7 +106,7 @@ Converted["_TextButton1"].Size = UDim2.new(0.0381679386, 30, 1, 0)
 Converted["_TextButton1"].Parent = Converted["_Frame3"]
 
 Converted["_TextLabel"].Font = Enum.Font.SourceSans
-Converted["_TextLabel"].Text = "BH Pet viewer"
+Converted["_TextLabel"].Text = "BH pet view"
 Converted["_TextLabel"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextLabel"].TextScaled = true
 Converted["_TextLabel"].TextSize = 14
@@ -122,7 +127,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function XRHSGN_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function DVLW_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -167,6 +172,7 @@ local function XRHSGN_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 				isViewingPet = true
 				button.Text = "View Pet: on"
 				camera.CameraSubject = cameraTarget
+				camera.CameraOffset = Vector3.new(0, 1.5, 0)
 			else
 				-- Failed to find folder, pet, or valid part; trigger notification
 				pcall(function()
@@ -185,7 +191,7 @@ local function XRHSGN_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 		end
 	end)
 end
-local function HBBT_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function WUYX_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -213,5 +219,5 @@ local function HBBT_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fra
 	end)
 end
 
-coroutine.wrap(XRHSGN_fake_script)()
-coroutine.wrap(HBBT_fake_script)()
+coroutine.wrap(DVLW_fake_script)()
+coroutine.wrap(WUYX_fake_script)()
