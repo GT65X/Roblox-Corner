@@ -127,7 +127,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function FVTZPUP_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function YGMTX_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -142,7 +142,6 @@ local function FVTZPUP_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.
 
 	local Players = game:GetService("Players")
 	local Workspace = game:GetService("Workspace")
-	local RunService = game:GetService("RunService")
 	local StarterGui = game:GetService("StarterGui")
 	
 	local player = Players.LocalPlayer
@@ -150,8 +149,6 @@ local function FVTZPUP_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.
 	local button = script.Parent -- The TextButton
 	
 	local isViewingPet = false
-	local viewPart = nil
-	local renderConnection = nil
 	
 	button.MouseButton1Click:Connect(function()
 		local character = player.Character or player.CharacterAdded:Wait()
@@ -171,36 +168,13 @@ local function FVTZPUP_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.
 			end
 	
 			if cameraTarget then
+				-- Successfully found the pet and a valid part
 				isViewingPet = true
 				button.Text = "View Pet: on"
-	
-				-- Create the transparent, non-collidable focus part
-				if not viewPart then
-					viewPart = Instance.new("Part")
-					viewPart.Name = "PetCameraFocusPart"
-					viewPart.Size = Vector3.new(1, 1, 1)
-					viewPart.Transparency = 1
-					viewPart.CanCollide = false
-					viewPart.Anchored = true -- Anchored so physics don't affect it
-					viewPart.CastShadow = false
-					viewPart.Parent = Workspace
-				end
-	
-				-- Focus camera on our custom part
-				camera.CameraSubject = viewPart
+				camera.CameraSubject = cameraTarget
 				humanoid.CameraOffset = Vector3.new(0, 0, 0)
-	
-				-- Continuously update the part's position and rotation to STAY with the pet
-				renderConnection = RunService.RenderStepped:Connect(function()
-					if cameraTarget and cameraTarget.Parent and viewPart then
-						-- Matches position/rotation and stays 2 studs above the pet
-						viewPart.CFrame = cameraTarget.CFrame + Vector3.new(0, 2, 0)
-					else
-						-- If the pet disappears/is deleted, turn off the view automatically
-						button.MouseButton1Click:Fire()
-					end
-				end)
 			else
+				-- Failed to find folder, pet, or valid part; trigger notification
 				pcall(function()
 					StarterGui:SetCore("SendNotification", {
 						Title = "Cannot find pet",
@@ -214,22 +188,10 @@ local function FVTZPUP_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.
 			isViewingPet = false
 			button.Text = "View Pet: off"
 			camera.CameraSubject = humanoid
-	
-			-- Stop updating the position
-			if renderConnection then
-				renderConnection:Disconnect()
-				renderConnection = nil
-			end
-	
-			-- Clean up the temporary part
-			if viewPart then
-				viewPart:Destroy()
-				viewPart = nil
-			end
 		end
 	end)
 end
-local function PZGOAA_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function KQBXU_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -257,5 +219,5 @@ local function PZGOAA_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 	end)
 end
 
-coroutine.wrap(FVTZPUP_fake_script)()
-coroutine.wrap(PZGOAA_fake_script)()
+coroutine.wrap(YGMTX_fake_script)()
+coroutine.wrap(KQBXU_fake_script)()
