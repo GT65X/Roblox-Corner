@@ -127,7 +127,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function PZTMVF_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function RRJZK_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -149,6 +149,7 @@ local function PZTMVF_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 	local button = script.Parent -- The TextButton
 	
 	local isViewingPet = false
+	local viewPart = nil -- Reference for our temporary part
 	
 	button.MouseButton1Click:Connect(function()
 		local character = player.Character or player.CharacterAdded:Wait()
@@ -171,8 +172,25 @@ local function PZTMVF_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 				-- Successfully found the pet and a valid part
 				isViewingPet = true
 				button.Text = "View Pet: on"
-				camera.CameraSubject = cameraTarget
-				humanoid.CameraOffset = Vector3.new(0, 1.5, 0)
+	
+				-- Create a transparent, non-collidable part for the camera to focus on
+				if not viewPart then
+					viewPart = Instance.new("Part")
+					viewPart.Name = "PetCameraFocusPart"
+					viewPart.Size = Vector3.new(1, 1, 1)
+					viewPart.Transparency = 1
+					viewPart.CanCollide = false
+					viewPart.Anchored = true
+					viewPart.CastShadow = false
+					viewPart.Parent = Workspace
+				end
+	
+				-- Match position and rotation to the pet, but shifted 2 studs up
+				viewPart.CFrame = cameraTarget.CFrame + Vector3.new(0, 2, 0)
+	
+				-- Focus camera on our custom part
+				camera.CameraSubject = viewPart
+				humanoid.CameraOffset = Vector3.new(0, 0, 0)
 			else
 				-- Failed to find folder, pet, or valid part; trigger notification
 				pcall(function()
@@ -188,10 +206,16 @@ local function PZTMVF_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.F
 			isViewingPet = false
 			button.Text = "View Pet: off"
 			camera.CameraSubject = humanoid
+	
+			-- Clean up the temporary part if it exists
+			if viewPart then
+				viewPart:Destroy()
+				viewPart = nil
+			end
 		end
 	end)
 end
-local function OSKZQ_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
+local function RUAC_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Frame.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -219,5 +243,5 @@ local function OSKZQ_fake_script() -- Fake Script: StarterGui.ScreenGui.Frame.Fr
 	end)
 end
 
-coroutine.wrap(PZTMVF_fake_script)()
-coroutine.wrap(OSKZQ_fake_script)()
+coroutine.wrap(RRJZK_fake_script)()
+coroutine.wrap(RUAC_fake_script)()
