@@ -18,7 +18,6 @@ local Converted = {
 	["_main"] = Instance.new("CanvasGroup");
 	["_UICorner3"] = Instance.new("UICorner");
 	["_UIDragDetector"] = Instance.new("UIDragDetector");
-	["_UIShadow1"] = Instance.new("UIShadow");
 	["_Content"] = Instance.new("Frame");
 	["_ClickBlocker"] = Instance.new("TextButton");
 	["_UICorner4"] = Instance.new("UICorner");
@@ -162,19 +161,19 @@ local Converted = {
 	["_UIListLayout3"] = Instance.new("UIListLayout");
 	["_Home1"] = Instance.new("TextButton");
 	["_UICorner15"] = Instance.new("UICorner");
-	["_UIShadow2"] = Instance.new("UIShadow");
+	["_UIShadow1"] = Instance.new("UIShadow");
 	["_Actions"] = Instance.new("TextButton");
 	["_UICorner16"] = Instance.new("UICorner");
-	["_UIShadow3"] = Instance.new("UIShadow");
+	["_UIShadow2"] = Instance.new("UIShadow");
 	["_Cheats"] = Instance.new("TextButton");
 	["_UICorner17"] = Instance.new("UICorner");
-	["_UIShadow4"] = Instance.new("UIShadow");
+	["_UIShadow3"] = Instance.new("UIShadow");
 	["_Humanoid1"] = Instance.new("TextButton");
 	["_UICorner18"] = Instance.new("UICorner");
-	["_UIShadow5"] = Instance.new("UIShadow");
+	["_UIShadow4"] = Instance.new("UIShadow");
 	["_Abusive1"] = Instance.new("TextButton");
 	["_UICorner19"] = Instance.new("UICorner");
-	["_UIShadow6"] = Instance.new("UIShadow");
+	["_UIShadow5"] = Instance.new("UIShadow");
 	["_LocalScript16"] = Instance.new("LocalScript");
 	["_UICorner20"] = Instance.new("UICorner");
 	["_LocalScript17"] = Instance.new("LocalScript");
@@ -216,6 +215,7 @@ local Converted = {
 	["_LocalScript28"] = Instance.new("LocalScript");
 	["_value1"] = Instance.new("BoolValue");
 	["_LocalScript29"] = Instance.new("LocalScript");
+	["_UIShadow6"] = Instance.new("UIShadow");
 }
 
 -- Properties:
@@ -317,9 +317,6 @@ Converted["_UICorner3"].Parent = Converted["_main"]
 
 Converted["_UIDragDetector"].DragUDim2 = UDim2.new(0, 155, 0, 26)
 Converted["_UIDragDetector"].Parent = Converted["_main"]
-
-Converted["_UIShadow1"].BlurRadius = UDim.new(0, 10)
-Converted["_UIShadow1"].Parent = Converted["_main"]
 
 Converted["_Content"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Content"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1368,8 +1365,8 @@ Converted["_UICorner15"].TopLeftRadius = UDim.new(0, 3)
 Converted["_UICorner15"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner15"].Parent = Converted["_Home1"]
 
-Converted["_UIShadow2"].BlurRadius = UDim.new(0, 5)
-Converted["_UIShadow2"].Parent = Converted["_Home1"]
+Converted["_UIShadow1"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow1"].Parent = Converted["_Home1"]
 
 Converted["_Actions"].Font = Enum.Font.SourceSans
 Converted["_Actions"].Text = "Actions"
@@ -1391,8 +1388,8 @@ Converted["_UICorner16"].TopLeftRadius = UDim.new(0, 3)
 Converted["_UICorner16"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner16"].Parent = Converted["_Actions"]
 
-Converted["_UIShadow3"].BlurRadius = UDim.new(0, 5)
-Converted["_UIShadow3"].Parent = Converted["_Actions"]
+Converted["_UIShadow2"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow2"].Parent = Converted["_Actions"]
 
 Converted["_Cheats"].Font = Enum.Font.SourceSans
 Converted["_Cheats"].Text = "Cheats"
@@ -1414,8 +1411,8 @@ Converted["_UICorner17"].TopLeftRadius = UDim.new(0, 3)
 Converted["_UICorner17"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner17"].Parent = Converted["_Cheats"]
 
-Converted["_UIShadow4"].BlurRadius = UDim.new(0, 5)
-Converted["_UIShadow4"].Parent = Converted["_Cheats"]
+Converted["_UIShadow3"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow3"].Parent = Converted["_Cheats"]
 
 Converted["_Humanoid1"].Font = Enum.Font.SourceSans
 Converted["_Humanoid1"].Text = "Humanoid"
@@ -1437,8 +1434,8 @@ Converted["_UICorner18"].TopLeftRadius = UDim.new(0, 3)
 Converted["_UICorner18"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner18"].Parent = Converted["_Humanoid1"]
 
-Converted["_UIShadow5"].BlurRadius = UDim.new(0, 5)
-Converted["_UIShadow5"].Parent = Converted["_Humanoid1"]
+Converted["_UIShadow4"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow4"].Parent = Converted["_Humanoid1"]
 
 Converted["_Abusive1"].Font = Enum.Font.SourceSans
 Converted["_Abusive1"].Text = "Abusive"
@@ -1460,8 +1457,8 @@ Converted["_UICorner19"].TopLeftRadius = UDim.new(0, 3)
 Converted["_UICorner19"].TopRightRadius = UDim.new(0, 3)
 Converted["_UICorner19"].Parent = Converted["_Abusive1"]
 
-Converted["_UIShadow6"].BlurRadius = UDim.new(0, 5)
-Converted["_UIShadow6"].Parent = Converted["_Abusive1"]
+Converted["_UIShadow5"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow5"].Parent = Converted["_Abusive1"]
 
 Converted["_UICorner20"].BottomLeftRadius = UDim.new(0, 0)
 Converted["_UICorner20"].BottomRightRadius = UDim.new(0, 0)
@@ -1711,6 +1708,9 @@ Converted["_On1"].Parent = Converted["_Translucent window"]
 Converted["_value1"].Name = "value"
 Converted["_value1"].Parent = Converted["_Translucent window"]
 
+Converted["_UIShadow6"].BlurRadius = UDim.new(0, 5)
+Converted["_UIShadow6"].Parent = Converted["_main"]
+
 -- Fake Module Scripts:
 
 local fake_module_scripts = {}
@@ -1718,7 +1718,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function BQOG_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScript
+local function MGAV_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_open"]
@@ -1739,7 +1739,7 @@ local function BQOG_fake_script() -- Fake Script: StarterGui.GUI.open.LocalScrip
 		main.Visible = not main.Visible
 	end)
 end
-local function AGHK_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UICorner.LocalScript
+local function ASVTLUG_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner4"]
@@ -1759,7 +1759,7 @@ local function AGHK_fake_script() -- Fake Script: StarterGui.GUI.main.Content.UI
 		corner.CornerRadius = corner2.CornerRadius
 	end
 end
-local function OBQY_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Text.LocalScript
+local function HSKAE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Text.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Text"]
@@ -1793,7 +1793,7 @@ local function OBQY_fake_script() -- Fake Script: StarterGui.GUI.main.Content.pr
 		textLabel.Text = randomMessage
 	end
 end
-local function HFAXUVC_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Welcome.LocalScript
+local function VFXBPYA_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.Welcome.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Welcome"]
@@ -1813,7 +1813,7 @@ local function HFAXUVC_fake_script() -- Fake Script: StarterGui.GUI.main.Content
 	-- Sets the text to "Welcome, " followed by your username
 	textLabel.Text = "Welcome, " .. player.Name
 end
-local function RPNWYRU_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.LocalScript
+local function SIVUW_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Home.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Home"]
@@ -1828,7 +1828,7 @@ local function RPNWYRU_fake_script() -- Fake Script: StarterGui.GUI.main.Content
 
 	script.Parent.Visible = true
 end
-local function SEYYT_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
+local function ZDEZMAE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.WalkSpeed.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_WalkSpeed"]
@@ -1861,7 +1861,7 @@ local function SEYYT_fake_script() -- Fake Script: StarterGui.GUI.main.Content.p
 		end
 	end)
 end
-local function PWLVYC_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
+local function LOWL_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.JumpPower.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_JumpPower"]
@@ -1895,7 +1895,7 @@ local function PWLVYC_fake_script() -- Fake Script: StarterGui.GUI.main.Content.
 		end
 	end)
 end
-local function ZHPTIII_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
+local function ONUTUN_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Humanoid.HipHeight.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_HipHeight"]
@@ -1928,7 +1928,7 @@ local function ZHPTIII_fake_script() -- Fake Script: StarterGui.GUI.main.Content
 		end
 	end)
 end
-local function HIFYX_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
+local function XDIZFDH_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Fling.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox"]
@@ -2037,7 +2037,7 @@ local function HIFYX_fake_script() -- Fake Script: StarterGui.GUI.main.Content.p
 		end)
 	end)
 end
-local function PUGDRS_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
+local function IIVGUS_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Touch Fling.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton"]
@@ -2120,7 +2120,7 @@ local function PUGDRS_fake_script() -- Fake Script: StarterGui.GUI.main.Content.
 		end
 	end)
 end
-local function UIYFH_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
+local function ASRVYEJ_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.Kill.TextBox.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextBox1"]
@@ -2218,7 +2218,7 @@ local function UIYFH_fake_script() -- Fake Script: StarterGui.GUI.main.Content.p
 		end)
 	end)
 end
-local function YKFQEE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.LocalScript
+local function GOUA_fake_script() -- Fake Script: StarterGui.GUI.main.Content.preset-frames.Abusive.Sidebar.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Sidebar"]
@@ -2269,7 +2269,7 @@ local function YKFQEE_fake_script() -- Fake Script: StarterGui.GUI.main.Content.
 		end
 	end
 end
-local function BPRSFJ_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.close.LocalScript
+local function DHHHX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_close"]
@@ -2289,7 +2289,7 @@ local function BPRSFJ_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.c
 	end)
 	--recycled code
 end
-local function HRGB_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min.LocalScript
+local function MQVQ_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_min"]
@@ -2309,7 +2309,7 @@ local function HRGB_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.min
 		mainFrame.Visible = false
 	end)
 end
-local function LBYDLGG_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.MenuButton.LocalScript
+local function QLOUVWX_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.MenuButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_MenuButton"]
@@ -2369,7 +2369,7 @@ local function LBYDLGG_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.
 		end
 	end)
 end
-local function FVQI_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.DarkenEffect.UICorner.LocalScript
+local function OFWBO_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.DarkenEffect.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner14"]
@@ -2400,7 +2400,7 @@ local function FVQI_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Dar
 		warn("Could not find UICorner four levels up!")
 	end
 end
-local function OQABFPN_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.LocalScript
+local function DMXHVHE_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Menu"]
@@ -2448,7 +2448,7 @@ local function OQABFPN_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.
 		end
 	end
 end
-local function AZSPRZG_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.UICorner.LocalScript
+local function WUZSWQW_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.Menu.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner20"]
@@ -2478,7 +2478,7 @@ local function AZSPRZG_fake_script() -- Fake Script: StarterGui.GUI.main.Topbar.
 		warn("Could not find UICorner four levels up!")
 	end
 end
-local function XMYKN_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.Activate.LocalScript
+local function FHLPEV_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.Activate.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Activate"]
@@ -2514,7 +2514,7 @@ local function XMYKN_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 		end
 	end)
 end
-local function QHVYCQ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.UICorner.LocalScript
+local function RIBN_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.UICorner.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UICorner21"]
@@ -2536,7 +2536,7 @@ local function QHVYCQ_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 		corner1.BottomRightRadius = corner2.CornerRadius
 	end
 end
-local function HYQPSY_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.LocalScript
+local function HGLW_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_settings"]
@@ -2552,7 +2552,7 @@ local function HYQPSY_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 	script.Parent.Position = UDim2.new(1, 0,0, 25)
 	script.Parent.Visible = false
 end
-local function WTNEDE_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.TextButton.LocalScript
+local function RGKQOT_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.TextButton.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_TextButton1"]
@@ -2581,7 +2581,7 @@ local function WTNEDE_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 		uiElement.Visible = false
 	end)
 end
-local function XQIWR_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.UIDragDetector.LocalScript
+local function XMQJKSS_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.UIDragDetector.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_UIDragDetector1"]
@@ -2597,7 +2597,7 @@ local function XQIWR_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 	local Bufferzone = script.Parent.Parent.Parent.Parent
 	script.Parent.BoundingUI = Bufferzone
 end
-local function TUDU_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.LocalScript
+local function TKIHRWE_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Bufferzone.Line.dragger.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_dragger"]
@@ -2638,7 +2638,7 @@ local function TUDU_fake_script() -- Fake Script: StarterGui.GUI.main.quicksetti
 		warn("Script initialization failed: " .. tostring(err))
 	end
 end
-local function MQUNTQK_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.Off.LocalScript
+local function YTGCNDD_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.Off.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Off"]
@@ -2685,7 +2685,7 @@ local function MQUNTQK_fake_script() -- Fake Script: StarterGui.GUI.main.quickse
 		boolValue.Value = true
 	end)
 end
-local function LHFYLB_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.On.LocalScript
+local function HXOKVH_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.On.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_On"]
@@ -2732,7 +2732,7 @@ local function LHFYLB_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 		boolValue.Value = false
 	end)
 end
-local function HYXLTW_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.value.LocalScript
+local function PRUR_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.PMode.value.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_value"]
@@ -2784,7 +2784,7 @@ local function HYXLTW_fake_script() -- Fake Script: StarterGui.GUI.main.quickset
 	-- Run once on startup in case it starts as true
 	updateColor()
 end
-local function GWAAA_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.Off.LocalScript
+local function NESJH_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.Off.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Off1"]
@@ -2831,7 +2831,7 @@ local function GWAAA_fake_script() -- Fake Script: StarterGui.GUI.main.quicksett
 		boolValue.Value = true
 	end)
 end
-local function VMDYFIR_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.On.LocalScript
+local function OOUWSCE_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.On.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_On1"]
@@ -2878,7 +2878,7 @@ local function VMDYFIR_fake_script() -- Fake Script: StarterGui.GUI.main.quickse
 		boolValue.Value = false
 	end)
 end
-local function ZNPCARJ_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.value.LocalScript
+local function EHHS_fake_script() -- Fake Script: StarterGui.GUI.main.quicksettings.settings.Switches.Translucent window.value.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_value1"]
@@ -2913,33 +2913,33 @@ local function ZNPCARJ_fake_script() -- Fake Script: StarterGui.GUI.main.quickse
 	updateTransparency()
 end
 
-coroutine.wrap(BQOG_fake_script)()
-coroutine.wrap(AGHK_fake_script)()
-coroutine.wrap(OBQY_fake_script)()
-coroutine.wrap(HFAXUVC_fake_script)()
-coroutine.wrap(RPNWYRU_fake_script)()
-coroutine.wrap(SEYYT_fake_script)()
-coroutine.wrap(PWLVYC_fake_script)()
-coroutine.wrap(ZHPTIII_fake_script)()
-coroutine.wrap(HIFYX_fake_script)()
-coroutine.wrap(PUGDRS_fake_script)()
-coroutine.wrap(UIYFH_fake_script)()
-coroutine.wrap(YKFQEE_fake_script)()
-coroutine.wrap(BPRSFJ_fake_script)()
-coroutine.wrap(HRGB_fake_script)()
-coroutine.wrap(LBYDLGG_fake_script)()
-coroutine.wrap(FVQI_fake_script)()
-coroutine.wrap(OQABFPN_fake_script)()
-coroutine.wrap(AZSPRZG_fake_script)()
-coroutine.wrap(XMYKN_fake_script)()
-coroutine.wrap(QHVYCQ_fake_script)()
-coroutine.wrap(HYQPSY_fake_script)()
-coroutine.wrap(WTNEDE_fake_script)()
-coroutine.wrap(XQIWR_fake_script)()
-coroutine.wrap(TUDU_fake_script)()
-coroutine.wrap(MQUNTQK_fake_script)()
-coroutine.wrap(LHFYLB_fake_script)()
-coroutine.wrap(HYXLTW_fake_script)()
-coroutine.wrap(GWAAA_fake_script)()
-coroutine.wrap(VMDYFIR_fake_script)()
-coroutine.wrap(ZNPCARJ_fake_script)()
+coroutine.wrap(MGAV_fake_script)()
+coroutine.wrap(ASVTLUG_fake_script)()
+coroutine.wrap(HSKAE_fake_script)()
+coroutine.wrap(VFXBPYA_fake_script)()
+coroutine.wrap(SIVUW_fake_script)()
+coroutine.wrap(ZDEZMAE_fake_script)()
+coroutine.wrap(LOWL_fake_script)()
+coroutine.wrap(ONUTUN_fake_script)()
+coroutine.wrap(XDIZFDH_fake_script)()
+coroutine.wrap(IIVGUS_fake_script)()
+coroutine.wrap(ASRVYEJ_fake_script)()
+coroutine.wrap(GOUA_fake_script)()
+coroutine.wrap(DHHHX_fake_script)()
+coroutine.wrap(MQVQ_fake_script)()
+coroutine.wrap(QLOUVWX_fake_script)()
+coroutine.wrap(OFWBO_fake_script)()
+coroutine.wrap(DMXHVHE_fake_script)()
+coroutine.wrap(WUZSWQW_fake_script)()
+coroutine.wrap(FHLPEV_fake_script)()
+coroutine.wrap(RIBN_fake_script)()
+coroutine.wrap(HGLW_fake_script)()
+coroutine.wrap(RGKQOT_fake_script)()
+coroutine.wrap(XMQJKSS_fake_script)()
+coroutine.wrap(TKIHRWE_fake_script)()
+coroutine.wrap(YTGCNDD_fake_script)()
+coroutine.wrap(HXOKVH_fake_script)()
+coroutine.wrap(PRUR_fake_script)()
+coroutine.wrap(NESJH_fake_script)()
+coroutine.wrap(OOUWSCE_fake_script)()
+coroutine.wrap(EHHS_fake_script)()
